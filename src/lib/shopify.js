@@ -1,0 +1,67 @@
+import axios from "axios";
+
+const shopifyAPI = axios.create({
+  baseURL: process.env.SHOPIFY_STORE_DOMAIN,
+  headers: {
+    "X-Shopify-Storefront-Access-Token":
+      process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+    "Content-Type": "application/json",
+  },
+});
+
+export async function getAllProducts(category) {
+  const query = `{
+          products(query: "tag:${category} ", first:10) {
+            edges{
+              node {
+                id
+                title
+                tags
+                priceRange {
+                  minVariantPrice {
+                    amount
+                  }
+                }
+                compareAtPriceRange {
+                  minVariantPrice {
+                    amount
+                  }
+                }
+                featuredImage {
+                  altText
+                  url
+                }
+              }
+            }
+          }
+        }`;
+  const response = await shopifyAPI.post("", { query });
+  return response.data;
+}
+export async function getProductByID(id) {
+  const query = `{
+          
+  product(id: "gid://shopify/Product/${id}") {
+            id
+            title
+            description
+            tags
+            priceRange {
+              minVariantPrice {
+                amount
+              }
+            }
+            compareAtPriceRange {
+              minVariantPrice {
+                amount
+              }
+            }
+            featuredImage {
+              altText
+              url
+            }
+          }
+        }`;
+  const response = await shopifyAPI.post("", { query });
+  return response.data;
+}
