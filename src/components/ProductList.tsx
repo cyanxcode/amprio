@@ -1,7 +1,7 @@
 import { getAllProducts } from "@/lib/shopify";
 import ProductCard from "./ProductCard";
 interface Props {
-  category: string;
+  category: any;
 }
 
 const ProductList = async ({ category }: Props) => {
