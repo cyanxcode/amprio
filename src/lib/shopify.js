@@ -11,12 +11,13 @@ const shopifyAPI = axios.create({
 
 export async function getAllProducts(category) {
   const query = `{
-          products(query: "tag:${category} ", first:10) {
+          products(query: "product_type:${category} ", first:20) {
             edges{
               node {
                 id
                 title
                 tags
+                productType
                 priceRange {
                   minVariantPrice {
                     amount
@@ -44,8 +45,16 @@ export async function getProductByID(id) {
   product(id: "gid://shopify/Product/${id}") {
             id
             title
+            productType
             description
-            tags
+            variants(first: 4) {
+              edges {
+                node {
+                  id
+                  title
+                }
+              }
+            }
             priceRange {
               minVariantPrice {
                 amount
@@ -59,6 +68,35 @@ export async function getProductByID(id) {
             featuredImage {
               altText
               url
+            }
+          }
+        }`;
+  const response = await shopifyAPI.post("", { query });
+  return response.data;
+}
+
+export async function similarProducts(category) {
+  const query = `{
+          products(query: "product_type:${category} ", first:4) {
+            edges{
+              node {
+                id
+                title
+                priceRange {
+                  minVariantPrice {
+                    amount
+                  }
+                }
+                compareAtPriceRange {
+                  minVariantPrice {
+                    amount
+                  }
+                }
+                featuredImage {
+                  altText
+                  url
+                }
+              }
             }
           }
         }`;

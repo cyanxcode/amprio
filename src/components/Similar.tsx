@@ -1,17 +1,24 @@
-import { getAllProducts } from "@/lib/shopify";
+import { similarProducts } from "@/lib/shopify";
 import ProductCard from "./ProductCard";
+
 interface Props {
-  category: string;
+  category?: string;
+  pageID?: string;
 }
 
-const ProductList = async ({ category }: Props) => {
-  const response = await getAllProducts(category);
+export default async function Similar({ category, pageID }: Props) {
+  const response = await similarProducts(category);
   const data = response.data.products.edges;
-  console.log(data);
+  const filtered = data.filter((product: any) => product.node.id != pageID);
+
+  console.log(filtered);
   return (
     <>
+      <h1 className="flex w-full text-3xl justify-center mt-20">
+        Similar Products
+      </h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 sm:gap-1 my-10 mx-2 ">
-        {data.map((product: any) => (
+        {filtered.map((product: any) => (
           <ProductCard
             key={product.node.id}
             gid={product.node.id.split("/")[4]}
@@ -31,6 +38,4 @@ const ProductList = async ({ category }: Props) => {
       </div>
     </>
   );
-};
-
-export default ProductList;
+}

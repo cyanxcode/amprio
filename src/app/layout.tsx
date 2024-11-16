@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Amprio",
@@ -13,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
+      <body>
+        <div className="min-h-[100vh]">{children}</div>
+        <Footer />
       </body>
     </html>
   );
