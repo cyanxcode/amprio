@@ -10,14 +10,10 @@ import List from "./List";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
 
-  const toggle = () => {
-    menu ? setMenu(false) : setMenu(true);
-  };
-
   return (
     <>
       <nav className="flex px-5 sm:px-10 h-16 items-center justify-between absolute w-full">
-        <div className="absolute z-40" onClick={() => toggle()}>
+        <div className="absolute z-40" onClick={() => setMenu(!menu)}>
           {!menu && <RiMenu2Fill size={25} />}
           {menu && <RxCross2 size={25} />}
         </div>
