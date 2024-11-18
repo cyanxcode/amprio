@@ -19,16 +19,14 @@ export default function Variant({ variant }: Props) {
   const searchParams = useSearchParams();
 
   const variant_id = searchParams.get("variant");
-  let x = "";
   const updateVariant = (id: string) => {
     router.push("?variant=" + id);
-    x = String(id);
   };
   return (
     <>
       <Select
         onValueChange={(value) => updateVariant(value)}
-        defaultValue={String(variant_id)}
+        defaultValue={variant_id ? String(variant_id) : undefined}
       >
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Select Variant" />
