@@ -12,10 +12,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex px-5 sm:px-10 h-16 items-center justify-between absolute w-full">
+      <nav className="flex px-5 sm:px-10 h-16 items-center justify-between relative w-full">
         <div className="absolute z-40" onClick={() => setMenu(!menu)}>
           {!menu && <RiMenu2Fill size={25} />}
-          {menu && <RxCross2 size={25} />}
         </div>
         <div className=""></div>
         <Link href="/" className="h-full">
@@ -29,8 +28,14 @@ export default function Navbar() {
         className={`
           ${menu && " left-0 border-r border-zinc-400"}
           ${!menu && " left-[-100vw] sm:left-[-24rem]"}
-           absolute z-30 w-full sm:w-96 h-[100vh] transition-all duration-100 bg-white }`}
+           fixed z-30 w-full sm:w-96 h-[100vh] top-0 transition-all duration-100 bg-white }`}
       >
+        <div
+          className="absolute z-40 mt-5 ml-5 sm:ml-10"
+          onClick={() => setMenu(!menu)}
+        >
+          {menu && <RxCross2 size={25} />}
+        </div>
         <List />
       </div>
     </>

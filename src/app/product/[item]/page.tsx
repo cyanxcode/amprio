@@ -1,5 +1,6 @@
 import Nav from "@/components/Navbar/Nav";
 import Similar from "@/components/Similar";
+import Variant from "@/components/Variant";
 import { getProductByID } from "@/lib/shopify";
 import Link from "next/link";
 
@@ -11,12 +12,11 @@ export default async function ProductDetails({
   const { item } = await params;
   const response = await getProductByID(item);
   const product = response.data.product;
+  console.log(product.variants.edges);
   return (
     <>
-      <div className="absolute w-full top-0">
-        <Nav />
-      </div>
-      <div className="md:grid md:grid-cols-5 items-center mt-32 justify-center ">
+      <Nav />
+      <div className="md:grid md:grid-cols-5 items-center mt-12 justify-center ">
         <img
           className="w-[60%] ml-[50%] translate-x-[-50%] col-span-3"
           src={product.featuredImage.url}
@@ -39,6 +39,12 @@ export default async function ProductDetails({
                 product.compareAtPriceRange.minVariantPrice.amount
               ).toFixed(2)}
             </h5>
+          </div>
+          <div className=" font-medium text-zinc-600 tracking-wider">
+            Variants:
+          </div>
+          <div className="flex gap-4 items-center">
+            <Variant variant={product.variants.edges} />
           </div>
           <button className="border border-black h-10">Add to Cart</button>
           <button className="text-white bg-black h-10">Buy Now</button>

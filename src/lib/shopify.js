@@ -52,6 +52,7 @@ export async function getProductByID(id) {
                 node {
                   id
                   title
+                  
                 }
               }
             }
