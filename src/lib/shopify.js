@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const shopifyAPI = axios.create({
+export const shopifyAPI = axios.create({
   baseURL: process.env.SHOPIFY_STORE_DOMAIN,
   headers: {
     "X-Shopify-Storefront-Access-Token":
@@ -40,8 +40,8 @@ export async function getAllProducts(category) {
   return response.data;
 }
 export async function getProductByID(id) {
-  const query = `{
-          
+  const query = `
+  query {                  
   product(id: "gid://shopify/Product/${id}") {
             id
             title

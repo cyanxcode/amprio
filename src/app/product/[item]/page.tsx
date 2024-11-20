@@ -1,8 +1,9 @@
 import Nav from "@/components/Navbar/Nav";
 import Similar from "@/components/Similar";
 import Variant from "@/components/Variant";
-import { getProductByID } from "@/lib/shopify";
 import Link from "next/link";
+import AddToCart from "@/components/AddToCart";
+import { getProductByID } from "@/lib/shopify";
 
 export default async function ProductDetails({
   params,
@@ -12,7 +13,7 @@ export default async function ProductDetails({
   const { item } = await params;
   const response = await getProductByID(item);
   const product = response.data.product;
-  console.log(product.variants.edges);
+
   return (
     <>
       <Nav />
@@ -46,7 +47,7 @@ export default async function ProductDetails({
           <div className="flex gap-4 items-center">
             <Variant variant={product.variants.edges} />
           </div>
-          <button className="border border-black h-10">Add to Cart</button>
+          <AddToCart />
           <button className="text-white bg-black h-10">Buy Now</button>
           <p className="text-sm leading-6 cursor-default">
             {product.description}
