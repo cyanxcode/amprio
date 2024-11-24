@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/Footer";
+import "./globals.css";
+import Transition from "@/components/Transition";
+import Template from "./template";
 
 export const metadata: Metadata = {
   title: "Amprio",
@@ -17,8 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <SpeedInsights />
-        <div className="min-h-[100vh]">{children}</div>
-        <Footer />
+        <Template>
+          <div className="min-h-[100vh]">{children}</div>
+          <Footer />
+        </Template>
       </body>
     </html>
   );

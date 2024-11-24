@@ -13,3 +13,17 @@ export async function createCart() {
   const response = await shopifyAPI.post("", { query });
   return response.data;
 }
+
+export async function AddToCart(cartID, variantID, quantity) {
+  const query = `
+    mutation {
+      cartAdd(input: { lineItems: [{variantId: ${variantID}, quantity: ${quantity}}], id: ${cartID}}) {
+        cart {
+          id
+        }
+      }
+    }
+  `;
+  const response = await shopifyAPI.post("", { query });
+  return response.data;
+}

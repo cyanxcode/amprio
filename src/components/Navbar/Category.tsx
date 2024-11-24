@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Category() {
+export default function CategoryBar() {
   return (
     <>
-      <nav className="hidden w-full text-sm h-16 md:flex gap-10 font-semibold items-center justify-center bg-[#013236] text-white uppercase tracking-widest">
+      <nav className="hidden w-full text-sm h-10 md:flex gap-10 font-semibold items-center justify-center uppercase tracking-widest">
         <Link href="/Architectural">
           <div className=" hover:underline">Architectural</div>
         </Link>

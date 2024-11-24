@@ -47,13 +47,14 @@ export default async function ProductDetails({
           <div className="flex gap-4 items-center">
             <Variant variant={product.variants.edges} />
           </div>
-          <AddToCart />
+          <AddToCart cookie="" />
           <button className="text-white bg-black h-10">Buy Now</button>
           <p className="text-sm leading-6 cursor-default">
             {product.description}
           </p>
         </div>
       </div>
+      <div className="gold w-full h-2 mt-20"></div>
       <Similar category={product.productType} pageID={product.id} />
     </>
   );

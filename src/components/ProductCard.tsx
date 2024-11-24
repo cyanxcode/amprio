@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { easeInOut, motion, spring } from "framer-motion";
 
 interface Props {
   gid: number;
@@ -21,11 +23,19 @@ export default function ProductCard({
     <>
       <Link href={`/product/${gid}`}>
         <div className="w-full flex flex-col gap-3 cursor-pointer hover:bg-zinc-50 p-2 pb-4 ease-in-out duration-150 group">
-          <img
-            src={imageURL}
-            alt={imgAlt?.toString()}
-            className="w-full aspect-square object-cover rounded-md "
-          />
+          <div className="w-full aspect-square object-cover rounded-md overflow-hidden">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.99 }}
+              transition={{ duration: 0.15 }}
+            >
+              <img
+                src={imageURL}
+                alt={imgAlt?.toString()}
+                className="w-full aspect-square object-cover rounded-md "
+              />
+            </motion.div>
+          </div>
           <div className="">
             <div className="">
               <h3 className="text-nowrap overflow-hidden text-sm sm:text-md uppercase tracking-wider group-hover:underline">

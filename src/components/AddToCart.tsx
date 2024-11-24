@@ -1,9 +1,19 @@
 "use client";
+import { AddToCart } from "@/lib/cart";
 
-export default function AddToCart() {
+interface Props {
+  cookie: string;
+}
+
+export default function AddToCartBtn({ cookie }: Props) {
+  const AddItem = async () => {
+    //AddToCart();
+  };
   return (
     <>
-      <button className="h-10 border border-black">Add to Cart</button>
+      <button className="h-10 border border-black" onClick={AddItem}>
+        Add to Cart
+      </button>
     </>
   );
 }
