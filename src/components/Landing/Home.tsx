@@ -12,22 +12,22 @@ export default function Landing() {
       >
         <div className="relative top-[50%] left-[50%]">
           <div className="absolute">
-            <Photo time={0.5} width="10rem" />
+            <Photo time={0.5} />
           </div>
           <div className="absolute left-56 top-40">
-            <Photo time={0.8} width="10rem" />
+            <Photo time={0.8} />
           </div>
           <div className="absolute left-[-9rem] top-[16rem]">
-            <Photo time={1.2} width="10rem" />
+            <Photo time={1.2} />
           </div>
           <div className="absolute left-[-17rem] top-[4rem]">
-            <Photo time={1.5} width="10rem" />
+            <Photo time={1.5} />
           </div>
           <div className="absolute left-[-4rem] top-[-12rem]">
-            <Photo time={1.8} width="10rem" />
+            <Photo time={1.8} />
           </div>
           <div className="absolute left-64 top-[-12rem]">
-            <Photo time={2.1} width="10rem" />
+            <Photo time={2.1} />
           </div>
         </div>
       </motion.div>

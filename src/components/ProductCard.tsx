@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { easeInOut, motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Props {
   gid: number;

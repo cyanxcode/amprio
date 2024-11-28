@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 
 interface Props {
   time: number;
-  width: string;
 }
 
-export default function Photo({ time, width }: Props) {
+export default function Photo({ time }: Props) {
   return (
     <>
       <motion.div

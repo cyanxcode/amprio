@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
 import "./globals.css";
-import Transition from "@/components/Transition";
 import Template from "./template";
 
 export const metadata: Metadata = {
