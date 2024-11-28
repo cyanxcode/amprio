@@ -3,11 +3,15 @@ import { AddToCart } from "@/lib/cart";
 
 interface Props {
   cookie: string;
+  variantID: string;
+  quantity: number;
 }
 
-export default function AddToCartBtn({ cookie }: Props) {
+export default function AddToCartBtn({ cookie, variantID, quantity }: Props) {
   const AddItem = async () => {
-    //AddToCart();
+    const x = await AddToCart(cookie, variantID, quantity);
+    console.log(x);
+    console.log(cookie);
   };
   return (
     <>

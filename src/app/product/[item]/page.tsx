@@ -4,6 +4,7 @@ import Variant from "@/components/Variant";
 import Link from "next/link";
 import AddToCart from "@/components/AddToCart";
 import { getProductByID } from "@/lib/shopify";
+import { cookies } from "next/headers";
 
 export default async function ProductDetails({
   params,
@@ -13,6 +14,10 @@ export default async function ProductDetails({
   const { item } = await params;
   const response = await getProductByID(item);
   const product = response.data.product;
+  console.log(item);
+  //cookies cartID
+  const cookieStore = await cookies();
+  const cartId = cookieStore.get("cartID");
 
   return (
     <>
@@ -47,7 +52,11 @@ export default async function ProductDetails({
           <div className="flex gap-4 items-center">
             <Variant variant={product.variants.edges} />
           </div>
-          <AddToCart cookie="" />
+          <AddToCart
+            cookie={String(cartId?.value)}
+            variantID={item}
+            quantity={1}
+          />
           <button className="text-white bg-black h-10">Buy Now</button>
           <p className="text-sm leading-6 cursor-default">
             {product.description}

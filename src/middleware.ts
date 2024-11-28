@@ -8,8 +8,10 @@ export async function middleware(request: NextRequest) {
   if (!existingCookie) {
     const id = await createCart();
     const response = NextResponse.next();
-    response.cookies.set("cartID", id.data.cartCreate.cart.id);
+    response.cookies.set("cartID", id.data.cartCreate.cart.id, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 7,
+    });
+    return response;
   }
-
-  return NextResponse.next();
 }
