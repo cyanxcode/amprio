@@ -16,7 +16,6 @@ export default async function ProductDetails({
   const { item } = await params;
   const response = await getProductByID(item);
   const product = response.data.product;
-  const id = await createCart();
 
   //cookies cartID
   const cookieStore = await cookies();
