@@ -5,6 +5,8 @@ import Link from "next/link";
 import AddToCartBtn from "@/components/AddToCart";
 import { getProductByID } from "@/lib/shopify";
 import { cookies } from "next/headers";
+import { createCart } from "@/lib/cart";
+import { initalizeCart } from "@/app/action";
 
 export default async function ProductDetails({
   params,
@@ -14,11 +16,13 @@ export default async function ProductDetails({
   const { item } = await params;
   const response = await getProductByID(item);
   const product = response.data.product;
+  const id = await createCart();
 
   //cookies cartID
   const cookieStore = await cookies();
   const cartId = cookieStore.get("cartID");
 
+  initalizeCart();
   return (
     <>
       <Nav />

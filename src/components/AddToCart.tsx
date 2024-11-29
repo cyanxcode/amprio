@@ -16,7 +16,6 @@ export default function AddToCartBtn({
     const x = await AddToCart(cartId, merchandiseID, quantity);
     console.log(x);
     console.log(cartId);
-    console.log(merchandiseID);
   };
   return (
     <>
