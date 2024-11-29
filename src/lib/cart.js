@@ -17,7 +17,7 @@ export async function createCart() {
 export async function AddToCart(cartID, variantID, quantity) {
   const query = `
     mutation {
-      cartAdd(input: { lineItems: [{variantId: "${variantID}", quantity: "${quantity}"}], id: "${cartID}"}) {
+      cartLinesAdd(cartId: "${cartID}", lines: [{merchandiseId: "${variantID}", quantity: ${quantity}}] ) {
         cart {
           id
         }

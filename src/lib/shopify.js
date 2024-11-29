@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export const shopifyAPI = axios.create({
-  baseURL: process.env.SHOPIFY_STORE_DOMAIN,
+  baseURL: process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN,
   headers: {
     "X-Shopify-Storefront-Access-Token":
-      process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+      process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
     "Content-Type": "application/json",
   },
 });
