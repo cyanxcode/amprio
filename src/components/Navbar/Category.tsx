@@ -5,7 +5,7 @@ import { categories } from "@/lib/data";
 export default function CategoryBar() {
   return (
     <>
-      <nav className=" hidden absolute z-20 w-full text-md h-10 md:flex gap-10 items-center justify-center shadow-lg text-white bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
+      <nav className=" hidden z-20 w-full text-md h-10 md:flex gap-10 items-center justify-center shadow-lg text-white bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
         {categories.map((x) => (
           <div key={x.title} className="relative group h-full ">
             <div className="h-full flex items-center font-semibold uppercase tracking-widest">

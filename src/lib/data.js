@@ -23,7 +23,19 @@ export const categories = [
 ];
 
 export const quotes = [
-  "Hello World",
+  "90% of people miss stargazing due to light pollution.",
+  "Circadian lighting improves sleep quality by 75%.",
+  "80% of food tastes sweeter under warm lighting.",
+  "Smart lighting cuts energy use by 35%.",
+  "Over 60% of wildlife suffers from excessive artificial lighting.",
+  "Light shapes your sleep cycle.",
+  "Taste changes under different lights.",
+  "Invisible light powers modern tech.",
+  "Better lighting boosts your brain.",
+  "Your home called📞—it wants to shine brighter AND better.",
+  "Who needs the sun when you’ve got us?",
+  "Good lighting is priceless—just like your taste.",
+  "Your lights called—they’re tired of being basic.🤓",
   "Life's too short for bad lighting. Upgrade your glow.",
 ];
 
