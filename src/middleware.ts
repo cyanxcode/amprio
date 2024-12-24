@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { createCart } from "./lib/cart";
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next();
+  const response = NextResponse.next();
   try {
     const id = await createCart();
     const cartId = request.cookies.get("cartId");
