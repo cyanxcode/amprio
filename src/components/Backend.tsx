@@ -1,0 +1,6 @@
+"use server";
+import { cookies } from "next/headers";
+
+export const getCookie = async () => {
+  return (await cookies())?.get("cartId")?.value;
+};

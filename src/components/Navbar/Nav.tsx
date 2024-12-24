@@ -1,43 +1,70 @@
 "use client";
 
 import Link from "next/link";
+import { categories } from "@/lib/data";
 import { CiShoppingCart } from "react-icons/ci";
-import { RxCross2 } from "react-icons/rx";
+import { useCartContext } from "../Layout";
+import { useSidebar } from "../ui/sidebar";
 import { RiMenu2Fill } from "react-icons/ri";
-import { useState } from "react";
-import List from "./Sidebar";
+import { IoLogoYoutube } from "react-icons/io5";
 
-export default function Navbar() {
-  const [menu, setMenu] = useState(false);
+import { motion } from "framer-motion";
+
+export default function Nav() {
+  const { setIsCartOpen } = useCartContext();
+  const { toggleSidebar } = useSidebar();
 
   return (
     <>
-      <nav className="flex px-5 sm:px-10 h-20 items-center justify-between relative w-full">
-        <div className="absolute z-10 hidden" onClick={() => setMenu(!menu)}>
-          {!menu && <RiMenu2Fill size={25} />}
+      <nav className="flex w-[100vw] px-5 lg:pr-20 h-20 items-center text-white justify-between relative bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
+        <div className="flex items-center h-full">
+          <div className="block lg:hidden" onClick={toggleSidebar}>
+            <RiMenu2Fill size={25} />
+          </div>
+          <Link href="/" className="h-full cursor-pointer">
+            <img
+              src="/AmprioMainNoBg.png"
+              alt="Amprio"
+              className="h-full absolute z-40"
+            />
+          </Link>
         </div>
-        <div className=""></div>
-        <Link href="/" className="h-full">
-          <img src="/AmprioWhite.png" alt="Amprio" className="h-full" />
-        </Link>
-        <Link href="/cart">
-          <CiShoppingCart size={30} />
-        </Link>
+        <nav className=" hidden absolute z-20 w-full text-md h-10 lg:flex gap-10 items-center justify-center text-white">
+          {categories.map((x) => (
+            <div key={x.title} className="relative group h-full ">
+              <div className="h-full flex items-center font-semibold uppercase tracking-widest">
+                <Link href={x.href ? x.href : ""}>{x.title}</Link>
+              </div>
+              <div className="group-hover:flex flex-col bg-[#016f63] hidden w-auto h-auto rounded-t-none shadow-sm absolute rounded-md left-1/2 -translate-x-1/2">
+                {x.subCategories?.map((y) => (
+                  <Link
+                    key={y.title}
+                    href={y.href}
+                    className=" text-zinc-100 whitespace-nowrap pr-10 hover:underline px-5 py-3 "
+                  >
+                    {y.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </nav>
+        <div className="flex gap-8 items-center">
+          <Link href="https://www.youtube.com/@futurebrighthai" target="_blank">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <IoLogoYoutube size={25} />
+            </motion.div>
+          </Link>
+          <motion.div
+            onClick={() => setIsCartOpen(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <CiShoppingCart size={30} />
+          </motion.div>
+        </div>
       </nav>
-      <div
-        className={`
-          ${menu && " left-0 border-r border-zinc-400"}
-          ${!menu && " left-[-100vw] sm:left-[-24rem]"}
-           fixed z-30 w-full sm:w-96 h-[100vh] top-0 transition-all duration-100 bg-white }`}
-      >
-        <div
-          className="absolute z-10 mt-5 ml-5 sm:ml-10"
-          onClick={() => setMenu(!menu)}
-        >
-          {menu && <RxCross2 size={25} />}
-        </div>
-        <List />
-      </div>
+      <div className="gold w-full h-2"></div>
     </>
   );
 }

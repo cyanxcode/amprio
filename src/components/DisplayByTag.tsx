@@ -1,24 +1,22 @@
 "use client";
-import { Skeleton } from "@/components/ui/skeleton";
-
-import { getAllProducts } from "@/lib/shopify";
-import ProductCard from "./ProductCard";
+import { FetchByTag } from "@/lib/shopify";
+import { Skeleton } from "./ui/skeleton";
 import { useQuery } from "react-query";
+import ProductCard from "./ProductCard";
+
 interface Props {
-  category: any;
+  tag: any;
 }
 
-const ProductList = ({ category }: Props) => {
+export default function DisplayByTag({ tag }: Props) {
   const list = [0, 1, 2, 3];
-  const { data, isLoading, isError } = useQuery({
-    queryKey: [category],
+  const { data, isLoading } = useQuery({
+    queryKey: ["new"],
     queryFn: async () => {
-      const { data } = await getAllProducts(category);
+      const { data } = await FetchByTag(tag);
       return data.products.edges;
     },
   });
-  console.log(data);
-
   if (isLoading) {
     return (
       <>
@@ -31,15 +29,6 @@ const ProductList = ({ category }: Props) => {
               <Skeleton className="w-[100%] h-2 aspect-square rounded-md bg-zinc-100" />
             </div>
           ))}
-        </div>
-      </>
-    );
-  }
-  if (isError) {
-    return (
-      <>
-        <div className="w-full text-xl font-semibold text-center mt-20">
-          Some unknown error has occured, Reload the website or try again later.
         </div>
       </>
     );
@@ -67,6 +56,4 @@ const ProductList = ({ category }: Props) => {
       </div>
     </>
   );
-};
-
-export default ProductList;
+}

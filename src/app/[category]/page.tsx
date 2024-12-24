@@ -1,17 +1,12 @@
-import CategoryBar from "@/components/Navbar/Category";
-import Nav from "@/components/Navbar/Nav";
 import ProductList from "@/components/ProductList";
 
-export default function Category({ params }: any) {
-  const category = params.category;
+export default async function Category({ params }: any) {
+  const param = await params;
+  const category = await param.category;
   return (
     <>
-      <div className="mt-0 w-full h-20">
-        <Nav />
-      </div>
-      <CategoryBar />
-      <div className="flex mt-10 w-full pl-8 lg:pl-20 justify-start items-center">
-        <h2 className="text-3xl font-serif sm:text-4xl cursor-default">
+      <div className="flex mt-24 w-full lg:px-20 justify-center items-center">
+        <h2 className="text-4xl caveat sm:text-6xl cursor-default">
           {category}
         </h2>
       </div>

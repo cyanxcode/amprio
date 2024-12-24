@@ -1,30 +1,35 @@
-import Nav from "@/components/Navbar/Nav";
 import Similar from "@/components/Similar";
 import Variant from "@/components/Variant";
 import Link from "next/link";
-import AddToCartBtn from "@/components/AddToCart";
+import AddToCartBtn from "@/components/Cart/AddToCart";
 import { getProductByID } from "@/lib/shopify";
 import { cookies } from "next/headers";
-import { initalizeCart } from "@/app/action";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default async function ProductDetails({
   params,
 }: {
   params: Promise<{ item: string }>;
 }) {
+  //get query param variant id
   const { item } = await params;
+
+  //fetch product details
   const response = await getProductByID(item);
   const product = response.data.product;
 
   //cookies cartID
   const cookieStore = await cookies();
-  const cartId = cookieStore.get("cartID");
+  const cartId = cookieStore.get("cartId");
 
-  initalizeCart();
   return (
     <>
-      <Nav />
-      <div className="md:grid md:grid-cols-5 items-center mt-12 justify-center ">
+      <div className="md:grid md:grid-cols-5 items-center mt-16 pt-2 justify-center ">
         <img
           className="w-[60%] ml-[50%] translate-x-[-50%] col-span-3"
           src={product.featuredImage.url}
@@ -48,21 +53,27 @@ export default async function ProductDetails({
               ).toFixed(2)}
             </h5>
           </div>
-          <div className=" font-medium text-zinc-600 tracking-wider">
-            Variants:
-          </div>
-          <div className="flex gap-4 items-center">
-            <Variant variant={product.variants.edges} />
-          </div>
-          <AddToCartBtn
-            cartId={cartId?.value}
-            merchandiseID={product.variants.edges[0].node.id}
-            quantity={1}
-          />
-          <button className="text-white bg-black h-10">Buy Now</button>
+          <Variant variants={product.variants.edges} />
+          <AddToCartBtn cartId={cartId?.value} />
           <p className="text-sm leading-6 cursor-default">
             {product.description}
           </p>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Why choose amprio?</AccordionTrigger>
+              <AccordionContent>
+                Yes. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                What is the cancellation policies?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
       <div className="gold w-full h-2 mt-20"></div>
