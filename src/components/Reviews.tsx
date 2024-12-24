@@ -1,4 +1,4 @@
-/*"use client";
+"use client";
 import { useEffect } from "react";
 
 const ReviewWidget = () => {
@@ -48,4 +48,3 @@ const ReviewWidget = () => {
 };
 
 export default ReviewWidget;
-*/

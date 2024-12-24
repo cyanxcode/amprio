@@ -1,5 +1,6 @@
 import DisplayByTag from "@/components/DisplayByTag";
 import Quote from "@/components/Quote";
+import Reviews from "@/components/Reviews";
 import FAQs from "../components/FAQs";
 
 export default async function Main() {
@@ -18,6 +19,7 @@ export default async function Main() {
       <div className=" my-10">
         <h2 className="w-full text-center text-6xl caveat">Reviews</h2>
       </div>
+      <Reviews />
       <FAQs />
     </>
   );
