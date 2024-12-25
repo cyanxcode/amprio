@@ -19,6 +19,7 @@ export const categories = [
     href: "/OurWorld",
   },
 ];
+let x = "est";
 
 export const quotes = [
   "90% of people miss stargazing due to light pollution.",
