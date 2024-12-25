@@ -4,12 +4,6 @@ import Link from "next/link";
 import AddToCartBtn from "@/components/Cart/AddToCart";
 import { getProductByID } from "@/lib/shopify";
 import { cookies } from "next/headers";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 export default async function ProductDetails({
   params,
