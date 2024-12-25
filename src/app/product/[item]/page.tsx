@@ -58,25 +58,8 @@ export default async function ProductDetails({
           <p className="text-sm leading-6 cursor-default">
             {product.description}
           </p>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Why choose amprio?</AccordionTrigger>
-              <AccordionContent>
-                Yes. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                What is the cancellation policies?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
         </div>
       </div>
-      <div className="gold w-full h-2 mt-20"></div>
       <Similar category={product.productType} pageID={product.id} />
     </>
   );

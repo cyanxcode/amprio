@@ -5,17 +5,15 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
 import { categories } from "@/lib/data";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from "next/link";
 
 export function AppSidebar() {
@@ -30,29 +28,37 @@ export function AppSidebar() {
         </SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenu className="mt-10">
-            {categories.map((item) => (
-              <DropdownMenu key={item.title}>
-                <SidebarMenuItem className="text-white font-semibold text-2xl pl-5 text-center w-ful">
-                  <DropdownMenuTrigger asChild>
-                    <SidebarMenuButton asChild>
-                      <a href={item.href}>
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {item?.subCategories &&
-                      item.subCategories.map((x) => (
-                        <DropdownMenuItem key={x.title}>
-                          <Link href={x.href}>
+            <Accordion type="single" collapsible className="mx-5">
+              {categories.map((item) =>
+                item.href ? (
+                  <Link href={item.href}>
+                    <div
+                      className="text-white font-semibold py-4 border-b border-white hover:underline"
+                      key={item.title}
+                    >
+                      {item.title}
+                    </div>
+                  </Link>
+                ) : (
+                  <AccordionItem value={item.title} className=" ">
+                    <AccordionTrigger className="text-white font-semibold">
+                      {item.title}
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col gap-1 text-white font-medium">
+                      {item?.subCategories &&
+                        item.subCategories.map((x) => (
+                          <Link
+                            href={x.href}
+                            className="p-2 rounded-md hover:underline"
+                          >
                             <span>{x.title}</span>
                           </Link>
-                        </DropdownMenuItem>
-                      ))}
-                  </DropdownMenuContent>
-                </SidebarMenuItem>
-              </DropdownMenu>
-            ))}
+                        ))}
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              )}
+            </Accordion>
           </SidebarMenu>
         </SidebarGroupContent>
         <SidebarGroup />

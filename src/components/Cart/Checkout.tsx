@@ -10,17 +10,31 @@ interface Props {
 
 export default function CheckoutTab({ cartId }: Props) {
   const [total, setTotal] = useState();
-  const checkoutProceed = async () => {
+  const [url, setUrl] = useState("");
+  const getTotal = async () => {
     const x = await Checkout(cartId);
-    console.log(x);
     setTotal(x.data.cart.totalPrice.amount);
-    redirect(x.data.cart.checkoutUrl);
+    setUrl(x.data.cart.checkoutUrl);
+    console.log("Total");
+    console.log(x);
+  };
+  getTotal();
+  const checkoutProceed = async () => {
+    redirect(url);
   };
   return (
     <>
       <div className="w-full box-border bg-white shadow-md rounded-md  p-4">
-        <div className="mx-[10%] text-lg font-semibold mb-3">
-          Total Bill: {total}
+        <div className="mx-[10%] text-md font-medium mb-3 flex flex-col text-zinc-600">
+          <div className="flex justify-between">
+            Subtotal: <div className="">Rs {total}</div>
+          </div>
+          <div className="flex justify-between">
+            Taxes: <div className="">Rs {total}</div>
+          </div>
+          <div className="flex justify-between">
+            Total Bill: <div className="">Rs {total}</div>
+          </div>
         </div>
         <motion.button
           whileHover={{ scale: 1.02 }}

@@ -1,12 +1,10 @@
 export const categories = [
   {
     title: "Architectural",
-    href: "/Architectural",
     subCategories: [{ title: "Cob Lights", href: "Cob Lights" }],
   },
   {
     title: "Designer",
-    href: "/Architectural",
     subCategories: [
       { title: "Wall Lights", href: "Wall Lights" },
       { title: "Chandeliers", href: "Chandeliers" },

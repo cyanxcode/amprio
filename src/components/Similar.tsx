@@ -13,7 +13,7 @@ export default async function Similar({ category, pageID }: Props) {
   return (
     <>
       <h1 className="flex w-full text-3xl justify-center mt-20">
-        Similar Products
+        You may also like
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 sm:gap-1 my-10 mx-2 ">
         {filtered.map((product: any) => (

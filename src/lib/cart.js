@@ -98,10 +98,18 @@ export async function Checkout(cartID) {
   const query = ` 
   query checkoutURL {
     cart(id: ${cartID}){
-      checkoutUrl
-      totalPrice{
-        amount
-      }
+      checkoutUrltotalPriceV2 {
+      amount
+      currencyCode
+    }
+    subtotalPriceV2 {
+      amount
+      currencyCode
+    }
+    totalTaxV2 {
+      amount
+      currencyCode
+    }
     }
   }
   `;
