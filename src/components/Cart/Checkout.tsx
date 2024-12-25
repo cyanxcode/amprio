@@ -6,9 +6,10 @@ import { useState } from "react";
 
 interface Props {
   cartId: string | undefined;
+  totalx: any;
 }
 
-export default function CheckoutTab({ cartId }: Props) {
+export default function CheckoutTab({ cartId, totalx }: Props) {
   const [total, setTotal] = useState();
   const [url, setUrl] = useState("");
   const getTotal = async () => {
@@ -27,7 +28,7 @@ export default function CheckoutTab({ cartId }: Props) {
       <div className="w-full box-border bg-white shadow-md rounded-md  p-4">
         <div className="mx-[10%] text-md font-medium mb-3 flex flex-col text-zinc-600">
           <div className="flex justify-between">
-            Subtotal: <div className="">Rs {total}</div>
+            Subtotal: <div className="">Rs {totalx}</div>
           </div>
           <div className="flex justify-between">
             Taxes: <div className="">Rs {total}</div>

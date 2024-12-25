@@ -54,11 +54,6 @@ export async function getCart(cartID) {
               }
             }
             quantity
-            cost{
-              totalAmount{
-                amount
-              }
-            }
           }
         }
       }
