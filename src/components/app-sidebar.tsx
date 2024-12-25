@@ -31,7 +31,7 @@ export function AppSidebar() {
             <Accordion type="single" collapsible className="mx-5">
               {categories.map((item) =>
                 item.href ? (
-                  <Link href={item.href}>
+                  <Link href={item.href} key={item.title}>
                     <div
                       className="text-white font-semibold py-4 border-b border-white hover:underline"
                       key={item.title}
@@ -40,7 +40,7 @@ export function AppSidebar() {
                     </div>
                   </Link>
                 ) : (
-                  <AccordionItem value={item.title} className=" ">
+                  <AccordionItem value={item.title} key={item.title}>
                     <AccordionTrigger className="text-white font-semibold">
                       {item.title}
                     </AccordionTrigger>
@@ -48,6 +48,7 @@ export function AppSidebar() {
                       {item?.subCategories &&
                         item.subCategories.map((x) => (
                           <Link
+                            key={x.title}
                             href={x.href}
                             className="p-2 rounded-md hover:underline"
                           >
