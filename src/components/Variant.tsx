@@ -7,8 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+import { useCartContext } from "./Layout";
 
 // Define a type for the variant structure
 interface Variant {
@@ -23,8 +22,8 @@ interface Props {
 }
 
 export default function Variant({ variants }: Props) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const { setVariant } = useCartContext();
+  setVariant(String(variants[0].node.id.split("/").pop()));
   const LightColor = [
     ...new Set(
       variants.flatMap((variant: any) =>
@@ -46,7 +45,6 @@ export default function Variant({ variants }: Props) {
 
   console.log(variants);
 
-  const variant_id = searchParams.get("variant");
   const updateVariant = (value: string) => {
     variants.map((variant) => {
       const matchingOption = variant.node.selectedOptions.find(
@@ -55,8 +53,7 @@ export default function Variant({ variants }: Props) {
       console.log(value);
       console.log(matchingOption);
       if (matchingOption) {
-        router.push("?variant=" + variant.node.id.split("/").pop());
-        return variant.node.id;
+        setVariant(variant.node.id.split("/").pop());
       }
       return null;
     });
@@ -88,7 +85,7 @@ export default function Variant({ variants }: Props) {
           </div>
           <Select
             onValueChange={(value) => updateVariant(value)}
-            defaultValue={variant_id ? String(variant_id) : undefined}
+            defaultValue={variants[0].node.selectedOptions[0].value}
           >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select Variant" />
@@ -97,7 +94,7 @@ export default function Variant({ variants }: Props) {
               {LightColor.map((x: any) => (
                 <SelectItem
                   key={x}
-                  value={x.replaceAll(" ", "").replace("/", "-").toLowerCase()}
+                  value={x.replaceAll(" ", "").replace("/", "-")}
                 >
                   {x.replace("/", "&")}
                 </SelectItem>
@@ -114,7 +111,7 @@ export default function Variant({ variants }: Props) {
           </div>
           <Select
             onValueChange={(value) => updateVariant(value)}
-            defaultValue={variant_id ? String(variant_id) : undefined}
+            defaultValue={variants[0].node.selectedOptions[0].value}
           >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select Variant" />

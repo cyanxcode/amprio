@@ -18,6 +18,8 @@ type CartState = {
   isCartOpen: boolean;
   cartId: any;
   setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  variant: string | undefined;
+  setVariant: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 //create context for cart
 const cartContext = createContext<CartState | null>(null);
@@ -25,13 +27,16 @@ const cartContext = createContext<CartState | null>(null);
 export default function Layout({ children, cookie }: Props) {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartId, setCartId] = useState<string | undefined>("");
+  const [variant, setVariant] = useState<string | undefined>("");
 
   useEffect(() => {
     setCartId(cookie.value);
   }, [cookie, cartId]);
 
   return (
-    <cartContext.Provider value={{ isCartOpen, setIsCartOpen, cartId }}>
+    <cartContext.Provider
+      value={{ isCartOpen, setIsCartOpen, cartId, variant, setVariant }}
+    >
       <div className="flex">
         <Sidebar />
         <main className="flex-grow">{children}</main>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useCartContext } from "../Layout";
 import { useQuery, useQueryClient } from "react-query";
-import { useSearchParams } from "next/navigation";
 
 interface Props {
   cartId: any;
@@ -15,15 +14,12 @@ export default function AddToCartBtn({ cartId }: Props) {
   const { setIsCartOpen } = useCartContext();
   const [cartLoading, setCartLoading] = useState(false);
 
-  //merchandise
-
-  const searchParams = useSearchParams();
-  const variant_id = searchParams.get("variant");
-
   const queryClient = useQueryClient();
+  const { variant } = useCartContext();
 
   const { data } = useQuery(["cart"]);
   console.log(data);
+
   /*
   if (!isLoading && !isError) {
     const current = data.find(
@@ -36,7 +32,7 @@ export default function AddToCartBtn({ cartId }: Props) {
     setCartLoading(true);
     const x = await AddToCart(
       cartId,
-      "gid://shopify/ProductVariant/" + variant_id,
+      "gid://shopify/ProductVariant/" + variant,
       1
     );
     console.log(x);
@@ -45,6 +41,7 @@ export default function AddToCartBtn({ cartId }: Props) {
     setCartLoading(false);
     setIsCartOpen(true);
   };
+
   return (
     <>
       {!isInCart ? (
