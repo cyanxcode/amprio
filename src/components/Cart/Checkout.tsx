@@ -1,8 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { Checkout } from "@/lib/cart";
-import { redirect } from "next/navigation";
-import { useState } from "react";
 
 interface Props {
   cartId: string | undefined;
@@ -10,19 +8,18 @@ interface Props {
 }
 
 export default function CheckoutTab({ cartId, totalx }: Props) {
-  const [total, setTotal] = useState();
-  const [url, setUrl] = useState("");
+  const total = totalx;
   const getTotal = async () => {
     const x = await Checkout(cartId);
     /*
     setTotal(x.data.cart.totalPrice.amount);
     setUrl(x.data.cart.checkoutUrl);
-    console.log("Total");
-    console.log(x);*/
+    console.log("Total");*/
+    console.log(x);
   };
   getTotal();
   const checkoutProceed = async () => {
-    redirect(url);
+    console.log("Checkout Proceed");
   };
   return (
     <>

@@ -50,6 +50,7 @@ const Sidebar = () => {
                       <CartItem
                         id={x.node.id}
                         cartLineId={x.node.cartLinesId}
+                        img={x.node.merchandise.product.img}
                         name={x.node.merchandise.product.title}
                         variant={x.node.merchandise.title}
                         price={

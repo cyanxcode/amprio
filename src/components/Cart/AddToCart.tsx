@@ -81,6 +81,7 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
             quantity: 1,
             merchandise: {
               id: item.id,
+              img: item.merchandise.product.img,
               title: variants.find(
                 (x: any) =>
                   x.node.id == "gid://shopify/ProductVariant/" + variant

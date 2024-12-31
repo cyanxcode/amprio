@@ -12,6 +12,7 @@ import React, { useRef } from "react";
 interface Props {
   id: any;
   cartLineId: any;
+  img: string;
   name: string;
   variant: string;
   price: BigInteger;
@@ -22,6 +23,7 @@ interface Props {
 export default function CartItem({
   id,
   cartLineId,
+  img,
   name,
   variant,
   price,
@@ -43,6 +45,7 @@ export default function CartItem({
             title: variant,
             product: {
               title: name,
+              img: img,
               priceRange: { minVariantPrice: { amount: price } },
             },
           },
@@ -61,6 +64,7 @@ export default function CartItem({
               title: variant,
               product: {
                 title: name,
+                img: img,
                 priceRange: { minVariantPrice: { amount: price } },
               },
             },
@@ -85,6 +89,7 @@ export default function CartItem({
             title: variant,
             product: {
               title: name,
+              img: img,
               priceRange: { minVariantPrice: { amount: price } },
             },
           },
@@ -103,6 +108,7 @@ export default function CartItem({
               title: variant,
               product: {
                 title: name,
+                img: img,
                 priceRange: { minVariantPrice: { amount: price } },
               },
             },
@@ -124,6 +130,7 @@ export default function CartItem({
             title: variant,
             product: {
               title: name,
+              img: img,
               priceRange: { minVariantPrice: { amount: price } },
             },
           },
@@ -143,6 +150,7 @@ export default function CartItem({
               title: variant,
               product: {
                 title: name,
+                img: img,
                 priceRange: { minVariantPrice: { amount: price } },
               },
             },
@@ -164,7 +172,9 @@ export default function CartItem({
           key={id}
         >
           <div className="flex justify-between ">
-            <div className=" w-24 h-24 bg-black border border-black aspect-square rounded-sm"></div>
+            <div className="w-24 aspect-square rounde-sm overflow-hidden">
+              <img src={img} className="w-24" />
+            </div>
             <div className="w-full flex-col flex justify-between ">
               <div className="">
                 <div className="flex justify-between">
