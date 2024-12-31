@@ -2,26 +2,19 @@
 import { RxCross2 } from "react-icons/rx";
 import { useCartContext } from "../Layout";
 import { AnimatePresence, motion } from "framer-motion";
-import { useQuery } from "react-query";
 import CartItem from "./CartItem";
 import { CiShoppingCart } from "react-icons/ci";
 import React from "react";
 import CheckoutTab from "./Checkout";
-import { getCart } from "@/lib/cart";
 
 const Sidebar = () => {
-  const { isCartOpen, setIsCartOpen, cartId } = useCartContext();
+  const { isCartOpen, setIsCartOpen, cartId, optimisticData } =
+    useCartContext();
 
-  const { data } = useQuery({
-    queryKey: "cart",
-    queryFn: async () => {
-      const { data } = await getCart(cartId);
-      return data.cart.lines.edges;
-    },
-  });
   const toggleBtn = async () => {
     setIsCartOpen(false);
   };
+  console.log(optimisticData);
 
   return (
     <>
@@ -44,10 +37,10 @@ const Sidebar = () => {
             <h2 className="text-2xl font-medium p-5 mt-5 text-left w-full">
               Cart
             </h2>
-            {data != undefined && data.length != 0 ? (
+            {optimisticData && optimisticData.length > 0 ? (
               <>
                 <div className="flex justify-center flex-col gap-2 w-full p-4 ">
-                  {data?.map((x: any) => (
+                  {optimisticData?.map((x: any) => (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -56,6 +49,7 @@ const Sidebar = () => {
                     >
                       <CartItem
                         id={x.node.id}
+                        cartLineId={x.node.cartLinesId}
                         name={x.node.merchandise.product.title}
                         variant={x.node.merchandise.title}
                         price={

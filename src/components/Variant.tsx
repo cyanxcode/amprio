@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/select";
 
 import { useCartContext } from "./Layout";
+import { useEffect } from "react";
 
 // Define a type for the variant structure
 interface Variant {
@@ -23,7 +24,9 @@ interface Props {
 
 export default function Variant({ variants }: Props) {
   const { setVariant } = useCartContext();
-  setVariant(String(variants[0].node.id.split("/").pop()));
+  useEffect(() => {
+    setVariant(String(variants[0].node.id.split("/").pop()));
+  }, [setVariant, variants]);
   const LightColor = [
     ...new Set(
       variants.flatMap((variant: any) =>
@@ -43,15 +46,11 @@ export default function Variant({ variants }: Props) {
     ),
   ];
 
-  console.log(variants);
-
   const updateVariant = (value: string) => {
     variants.map((variant) => {
       const matchingOption = variant.node.selectedOptions.find(
-        (option: any) => option.value.toLowerCase() == value
+        (option: any) => option.value == value
       );
-      console.log(value);
-      console.log(matchingOption);
       if (matchingOption) {
         setVariant(variant.node.id.split("/").pop());
       }
@@ -71,7 +70,7 @@ export default function Variant({ variants }: Props) {
               defaultChecked
               className={`appearance-none w-6 h-6 border-2 border-zinc-200 rounded-full  p-2`}
               id=""
-              value={x.replaceAll(" ", "").replace("/", "-").toLowerCase()}
+              value={x.replaceAll(" ", "").replace("/", "-")}
             />
             <div className="absolute w-4 h-4 rounded-full peer-checked:bg-blue-300"></div>
           </div>
@@ -120,7 +119,7 @@ export default function Variant({ variants }: Props) {
               {Wattage.map((x: any) => (
                 <SelectItem
                   key={x}
-                  value={x.replaceAll(" ", "").replace("/", "-").toLowerCase()}
+                  value={x.replaceAll(" ", "").replace("/", "-")}
                 >
                   {x.replace("/", "&")}
                 </SelectItem>

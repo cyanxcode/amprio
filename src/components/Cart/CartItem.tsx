@@ -6,9 +6,12 @@ import { useQueryClient } from "react-query";
 import { CiSquarePlus } from "react-icons/ci";
 import { CiSquareMinus } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
+import { useCartContext } from "../Layout";
+import React, { useRef } from "react";
 
 interface Props {
   id: any;
+  cartLineId: any;
   name: string;
   variant: string;
   price: BigInteger;
@@ -18,25 +21,135 @@ interface Props {
 
 export default function CartItem({
   id,
+  cartLineId,
   name,
   variant,
   price,
   quantity,
   cartId,
 }: Props) {
+  const { addOptimisticData } = useCartContext();
+  const prevQuantityRef = useRef(quantity);
   const queryClient = useQueryClient();
+
   const removeItem = async () => {
-    const x = await removeFromCart(cartId, id);
+    React.startTransition(() => {
+      addOptimisticData({
+        node: {
+          id: id,
+          cartLineId: cartLineId,
+          quantity: 0,
+          merchandise: {
+            title: variant,
+            product: {
+              title: name,
+              priceRange: { minVariantPrice: { amount: price } },
+            },
+          },
+        },
+      });
+    });
+    const x = await removeFromCart(cartId, cartLineId);
+    if (!x.data) {
+      React.startTransition(() => {
+        addOptimisticData({
+          node: {
+            id: id,
+            cartLineId: cartLineId,
+            quantity: prevQuantityRef.current,
+            merchandise: {
+              title: variant,
+              product: {
+                title: name,
+                priceRange: { minVariantPrice: { amount: price } },
+              },
+            },
+          },
+        });
+      });
+    }
     console.log(x);
+    console.log(cartLineId);
     queryClient.invalidateQueries(["cart"]);
   };
+
+  //add quantity
   const addQuantity = async () => {
-    const x = await updateCart(cartId, id, quantity + 1);
+    React.startTransition(() => {
+      addOptimisticData({
+        node: {
+          id: id,
+          cartLineId: cartLineId,
+          quantity: quantity + 1,
+          merchandise: {
+            title: variant,
+            product: {
+              title: name,
+              priceRange: { minVariantPrice: { amount: price } },
+            },
+          },
+        },
+      });
+    });
+    const x = await updateCart(cartId, cartLineId, quantity + 1);
+    if (!x.data) {
+      React.startTransition(() => {
+        addOptimisticData({
+          node: {
+            id: id,
+            cartLineId: cartLineId,
+            quantity: prevQuantityRef.current,
+            merchandise: {
+              title: variant,
+              product: {
+                title: name,
+                priceRange: { minVariantPrice: { amount: price } },
+              },
+            },
+          },
+        });
+      });
+    }
     console.log(x);
     queryClient.invalidateQueries(["cart"]);
   };
   const subtractQuantity = async () => {
-    const x = await updateCart(cartId, id, quantity - 1);
+    React.startTransition(() => {
+      addOptimisticData({
+        node: {
+          id: id,
+          cartLineId: cartLineId,
+          quantity: quantity - 1,
+          merchandise: {
+            title: variant,
+            product: {
+              title: name,
+              priceRange: { minVariantPrice: { amount: price } },
+            },
+          },
+        },
+      });
+    });
+    console.log(cartLineId);
+    const x = await updateCart(cartId, cartLineId, quantity - 1);
+    if (!x.data) {
+      React.startTransition(() => {
+        addOptimisticData({
+          node: {
+            id: id,
+            cartLineId: cartLineId,
+            quantity: prevQuantityRef.current,
+            merchandise: {
+              title: variant,
+              product: {
+                title: name,
+                priceRange: { minVariantPrice: { amount: price } },
+              },
+            },
+          },
+        });
+      });
+    }
     console.log(x);
     queryClient.invalidateQueries(["cart"]);
   };

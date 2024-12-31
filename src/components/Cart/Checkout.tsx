@@ -14,10 +14,11 @@ export default function CheckoutTab({ cartId, totalx }: Props) {
   const [url, setUrl] = useState("");
   const getTotal = async () => {
     const x = await Checkout(cartId);
+    /*
     setTotal(x.data.cart.totalPrice.amount);
     setUrl(x.data.cart.checkoutUrl);
     console.log("Total");
-    console.log(x);
+    console.log(x);*/
   };
   getTotal();
   const checkoutProceed = async () => {
@@ -28,7 +29,7 @@ export default function CheckoutTab({ cartId, totalx }: Props) {
       <div className="w-full box-border bg-white shadow-md rounded-md  p-4">
         <div className="mx-[10%] text-md font-medium mb-3 flex flex-col text-zinc-600">
           <div className="flex justify-between">
-            Subtotal: <div className="">Rs {totalx}</div>
+            Subtotal: <div className="">Rs {total}</div>
           </div>
           <div className="flex justify-between">
             Taxes: <div className="">Rs {total}</div>

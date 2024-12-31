@@ -48,7 +48,25 @@ export default async function ProductDetails({
             </h5>
           </div>
           <Variant variants={product.variants.edges} />
-          <AddToCartBtn cartId={cartId?.value} />
+          <AddToCartBtn
+            cartId={cartId?.value}
+            variants={product.variants.edges}
+            item={{
+              id: product.variants.edges[0].node.id,
+              quantity: 1,
+              merchandise: {
+                title: product.variants.edges[0].node.title,
+                product: {
+                  title: product.title,
+                  priceRange: {
+                    minVariantPrice: {
+                      amount: product.priceRange.minVariantPrice.amount,
+                    },
+                  },
+                },
+              },
+            }}
+          />
           <p className="text-sm leading-6 cursor-default">
             {product.description}
           </p>

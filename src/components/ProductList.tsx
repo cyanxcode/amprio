@@ -17,7 +17,6 @@ const ProductList = ({ category }: Props) => {
       return data.products.edges;
     },
   });
-  console.log(data);
 
   if (isLoading) {
     return (

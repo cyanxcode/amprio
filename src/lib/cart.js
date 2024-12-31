@@ -22,6 +22,13 @@ export async function AddToCart(cartID, variantID, quantity) {
       cartLinesAdd(cartId: "${cartID}", lines: [{merchandiseId: "${variantID}", quantity: ${quantity}}] ) {
         cart {
           id
+          lines(first:1){
+            edges{
+              node{
+                id
+              }
+            }
+          }
         }
       }
     }
@@ -71,7 +78,7 @@ export async function updateCart(cartID, variantID, quantity) {
     cartLinesUpdate(
     cartId: ${cartID}
     lines: {
-      id: "${variantID}"
+      id: ${variantID}
       quantity: ${quantity}
     }) {
       cart{
