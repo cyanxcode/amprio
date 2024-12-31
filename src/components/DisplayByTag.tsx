@@ -1,7 +1,7 @@
 "use client";
 import { FetchByTag } from "@/lib/shopify";
 import { Skeleton } from "./ui/skeleton";
-import { useQuery } from "react-query";
+import { isError, useQuery } from "react-query";
 import ProductCard from "./ProductCard";
 
 interface Props {
@@ -10,8 +10,8 @@ interface Props {
 
 export default function DisplayByTag({ tag }: Props) {
   const list = [0, 1, 2, 3];
-  const { data, isLoading } = useQuery({
-    queryKey: ["new"],
+  const { data, isLoading, isError } = useQuery({
+    queryKey: [tag],
     queryFn: async () => {
       const { data } = await FetchByTag(tag);
       return data.products.edges;
@@ -32,6 +32,9 @@ export default function DisplayByTag({ tag }: Props) {
         </div>
       </>
     );
+  }
+  if (isError) {
+    return <div>Something went wrong</div>;
   }
   return (
     <>
