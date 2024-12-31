@@ -1,7 +1,7 @@
 "use client";
 import { FetchByTag } from "@/lib/shopify";
 import { Skeleton } from "./ui/skeleton";
-import { isError, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import ProductCard from "./ProductCard";
 
 interface Props {

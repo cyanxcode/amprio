@@ -57,7 +57,7 @@ export default async function ProductDetails({
               merchandise: {
                 title: product.variants.edges[0].node.title,
                 product: {
-                  img: product.featuredImage.url,
+                  img: product.featuredImage?.url,
                   title: product.title,
                   priceRange: {
                     minVariantPrice: {
