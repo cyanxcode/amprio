@@ -14,7 +14,6 @@ const Sidebar = () => {
   const toggleBtn = async () => {
     setIsCartOpen(false);
   };
-  console.log(optimisticData);
 
   return (
     <>
@@ -49,7 +48,7 @@ const Sidebar = () => {
                     >
                       <CartItem
                         id={x.node.id}
-                        cartLineId={x.node.cartLinesId}
+                        cartLinesId={x.node.cartLinesId}
                         img={x.node.merchandise.product.img}
                         name={x.node.merchandise.product.title}
                         variant={x.node.merchandise.title}
@@ -57,15 +56,12 @@ const Sidebar = () => {
                           x.node.merchandise.product.priceRange.minVariantPrice
                             .amount
                         }
-                        quantity={x.node.quantity}
+                        quantity={Number(x.node.quantity)}
                         cartId={cartId}
                       ></CartItem>
                     </motion.div>
                   ))}
-                  <CheckoutTab
-                    cartId={cartId}
-                    totalx={"data.node.cost.totalAmount.amount"}
-                  />
+                  <CheckoutTab cartId={cartId} totalx={""} />
                 </div>
               </>
             ) : (

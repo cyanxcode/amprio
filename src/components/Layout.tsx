@@ -33,6 +33,7 @@ type CartItemType = {
       title: string;
     };
     quantity: number;
+    cartLinesId: string;
   };
 };
 
@@ -43,7 +44,7 @@ type CartState = {
   setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
   variant: string | undefined;
   setVariant: React.Dispatch<React.SetStateAction<string | undefined>>;
-  optimisticData: any;
+  optimisticData: CartItemType[];
   addOptimisticData: any;
 };
 //create context for cart
@@ -51,18 +52,25 @@ const cartContext = createContext<CartState | null>(null);
 
 export default function Layout({ children, cookie }: Props) {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartId, setCartId] = useState<string | undefined>("");
+  const [cartId, setCartId] = useState<string | undefined>();
   const [variant, setVariant] = useState<string | undefined>("");
-
+  /*
   const { data, isLoading } = useQuery({
     queryKey: "cart",
     queryFn: async () => {
       const { data } = await getCart(cartId);
-      return data && data.cart.lines.edges;
+      localStorage.setItem("optimisticData", data.cart.lines.edges);
+      console.log("set");
+      console.log(data);
+      return data != undefined && data.cart.lines.edges;
     },
     enabled: cartId !== undefined,
   });
-  const initialOptimisticData = useRef<CartItemType[]>([]);
+  */
+  const initialOptimisticData = useRef<CartItemType[]>(
+    typeof window !== "undefined" &&
+      JSON.parse(localStorage.getItem("optimisticData") || "[]")
+  );
   const [optimisticData, addOptimisticData] = useOptimistic<
     CartItemType[],
     CartItemType
@@ -74,7 +82,11 @@ export default function Layout({ children, cookie }: Props) {
           item.node.id === newData.node.id
             ? {
                 ...item,
-                node: { ...item.node, quantity: newData.node.quantity },
+                node: {
+                  ...item.node,
+                  cartLinesId: newData.node.cartLinesId,
+                  quantity: newData.node.quantity,
+                },
               }
             : item
         )
@@ -83,17 +95,22 @@ export default function Layout({ children, cookie }: Props) {
     return [...state, newData];
   });
 
+  /*
   useEffect(() => {
     if (data && !isLoading) {
       initialOptimisticData.current = data;
-      console.log(data);
     }
   }, [data, isLoading]);
+  */
   useEffect(() => {
+    console.log(optimisticData);
     initialOptimisticData.current = optimisticData;
+    if (typeof window !== "undefined") {
+      localStorage.setItem("optimisticData", JSON.stringify(optimisticData));
+    }
   }, [optimisticData]);
   useEffect(() => {
-    if (cookie?.value && cartId == cookie.value) {
+    if (cookie?.value) {
       setCartId(cookie.value);
     }
   }, [cookie]);

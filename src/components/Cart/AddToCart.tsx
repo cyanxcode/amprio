@@ -3,6 +3,7 @@ import { AddToCart } from "@/lib/cart";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useCartContext } from "../Layout";
+import { QueryClient } from "react-query";
 
 interface Props {
   cartId: any;
@@ -15,6 +16,8 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
   const { setIsCartOpen, addOptimisticData, optimisticData } = useCartContext();
 
   const { variant } = useCartContext();
+
+  const queryClient = new QueryClient();
 
   //const { data, isLoading, isError } = useQuery<any>(["cart"]);
 
@@ -57,37 +60,30 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
       React.startTransition(() => {
         addOptimisticData({
           node: {
-            id: item.id,
-
+            id: "gid://shopify/ProductVariant/" + variant,
             quantity: 0,
-            merchandise: {
-              id: "",
-              title: "",
-              product: {
-                title: "",
-                priceRange: { minVariantPrice: { amount: 0 } },
-              },
-            },
           },
         });
       });
     } else {
       const cartLine = x.data.cartLinesAdd.cart.lines.edges[0].node.id;
+      const cartLineMain = cartLine.split("?")[0];
+      console.log(cartLineMain);
       React.startTransition(() => {
         addOptimisticData({
           node: {
-            id: item.id,
+            id: "gid://shopify/ProductVariant/" + variant,
             cartLinesId: cartLine,
             quantity: 1,
             merchandise: {
-              id: item.id,
-              img: item.merchandise.product.img,
               title: variants.find(
                 (x: any) =>
                   x.node.id == "gid://shopify/ProductVariant/" + variant
               ).node.title,
               product: {
+                id: "gid://shopify/ProductVariant/" + variant,
                 title: item.merchandise.product.title,
+                img: item.merchandise.img,
                 priceRange: {
                   minVariantPrice: {
                     amount:
@@ -101,7 +97,7 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
         });
       });
       console.log(x);
-      //queryClient.invalidateQueries(["cart"]);
+      queryClient.invalidateQueries(["cart"]);
     }
   };
 

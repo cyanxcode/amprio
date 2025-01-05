@@ -1,7 +1,8 @@
 import ProductList from "@/components/ProductList";
 
 export default async function Category({ params }: any) {
-  const category = params.category;
+  const param = await params
+  const category = param.category;
   return (
     <>
       <div className="flex mt-16 w-full lg:px-20 justify-center items-center">

@@ -76,9 +76,9 @@ export async function getCart(cartID) {
 export async function updateCart(cartID, variantID, quantity) {
   const query = ` mutation {
     cartLinesUpdate(
-    cartId: ${cartID}
+    cartId: ${cartID},
     lines: {
-      id: ${variantID}
+      id: "${variantID}",
       quantity: ${quantity}
     }) {
       cart{
@@ -122,6 +122,7 @@ export async function Checkout(cartID) {
 //Remove from cart
 
 export async function removeFromCart(cartID, lineIds) {
+  console.log(cartID, lineIds);
   const query = ` mutation {
     cartLinesRemove(
     cartId: ${cartID},

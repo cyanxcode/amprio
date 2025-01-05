@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 
 interface Props {
   id: any;
-  cartLineId: any;
+  cartLinesId: any;
   img: string;
   name: string;
   variant: string;
@@ -22,7 +22,7 @@ interface Props {
 
 export default function CartItem({
   id,
-  cartLineId,
+  cartLinesId,
   img,
   name,
   variant,
@@ -32,18 +32,20 @@ export default function CartItem({
 }: Props) {
   const { addOptimisticData } = useCartContext();
   const prevQuantityRef = useRef(quantity);
+  const prevCartLineRef = useRef(cartLinesId);
   const queryClient = useQueryClient();
-
   const removeItem = async () => {
     React.startTransition(() => {
       addOptimisticData({
         node: {
           id: id,
-          cartLineId: cartLineId,
+          cartLinesId: cartLinesId,
           quantity: 0,
           merchandise: {
+            id: id,
             title: variant,
             product: {
+              id: id,
               title: name,
               img: img,
               priceRange: { minVariantPrice: { amount: price } },
@@ -52,13 +54,13 @@ export default function CartItem({
         },
       });
     });
-    const x = await removeFromCart(cartId, cartLineId);
+    const x = await removeFromCart(cartId, cartLinesId);
     if (!x.data) {
       React.startTransition(() => {
         addOptimisticData({
           node: {
             id: id,
-            cartLineId: cartLineId,
+            cartLinesId: cartLinesId,
             quantity: prevQuantityRef.current,
             merchandise: {
               title: variant,
@@ -73,8 +75,6 @@ export default function CartItem({
       });
     }
     console.log(x);
-    console.log(cartLineId);
-    queryClient.invalidateQueries(["cart"]);
   };
 
   //add quantity
@@ -83,7 +83,7 @@ export default function CartItem({
       addOptimisticData({
         node: {
           id: id,
-          cartLineId: cartLineId,
+          cartLinesId: cartLinesId,
           quantity: quantity + 1,
           merchandise: {
             title: variant,
@@ -96,13 +96,13 @@ export default function CartItem({
         },
       });
     });
-    const x = await updateCart(cartId, cartLineId, quantity + 1);
-    if (!x.data) {
+    const x = await updateCart(cartId, cartLinesId, quantity + 1);
+    if (x.errors) {
       React.startTransition(() => {
         addOptimisticData({
           node: {
             id: id,
-            cartLineId: cartLineId,
+            cartLinesId: cartLinesId,
             quantity: prevQuantityRef.current,
             merchandise: {
               title: variant,
@@ -124,7 +124,7 @@ export default function CartItem({
       addOptimisticData({
         node: {
           id: id,
-          cartLineId: cartLineId,
+          cartLinesId: cartLinesId,
           quantity: quantity - 1,
           merchandise: {
             title: variant,
@@ -137,14 +137,13 @@ export default function CartItem({
         },
       });
     });
-    console.log(cartLineId);
-    const x = await updateCart(cartId, cartLineId, quantity - 1);
-    if (!x.data) {
+    const x = await updateCart(cartId, cartLinesId, quantity - 1);
+    if (x.errors) {
       React.startTransition(() => {
         addOptimisticData({
           node: {
             id: id,
-            cartLineId: cartLineId,
+            cartLinesId: cartLinesId,
             quantity: prevQuantityRef.current,
             merchandise: {
               title: variant,
@@ -159,7 +158,6 @@ export default function CartItem({
       });
     }
     console.log(x);
-    queryClient.invalidateQueries(["cart"]);
   };
   return (
     <>
