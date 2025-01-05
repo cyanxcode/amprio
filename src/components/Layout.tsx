@@ -1,5 +1,4 @@
 "use client";
-import { useQuery } from "react-query";
 import Sidebar from "./Cart/Sidebar";
 import React, {
   createContext,
@@ -10,7 +9,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { getCart } from "@/lib/cart";
 import Loading from "@/app/loading";
 
 interface Props {

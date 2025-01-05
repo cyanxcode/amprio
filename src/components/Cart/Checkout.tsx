@@ -14,13 +14,11 @@ export default function CheckoutTab({ cartId, totalx }: Props) {
   const total = totalx;
   const getTotal = async () => {
     const x = await Checkout(cartId);
-    /*
-    setTotal(x.data.cart.totalPrice.amount);
-    console.log("Total");*/
+    console.log("Total");
     setUrl(x.data.cart.checkoutUrl);
     console.log(x);
   };
-  //getTotal();
+  getTotal();
   const checkoutProceed = async () => {
     console.log("Checkout Proceed");
     redirect(url);

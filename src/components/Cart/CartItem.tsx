@@ -32,7 +32,6 @@ export default function CartItem({
 }: Props) {
   const { addOptimisticData } = useCartContext();
   const prevQuantityRef = useRef(quantity);
-  const prevCartLineRef = useRef(cartLinesId);
   const queryClient = useQueryClient();
   const removeItem = async () => {
     React.startTransition(() => {
