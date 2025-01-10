@@ -7,6 +7,7 @@ export default function Hero() {
             src="https://cdn.shopify.com/videos/c/o/v/f7f2d726c19543b08f7139395db45dd8.mp4"
             className="w-[100%]"
             autoPlay
+            muted
             loop
           ></video>
         </div>

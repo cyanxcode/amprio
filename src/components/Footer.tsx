@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <div className="gold w-full h-2 mt-20"></div>
-      <footer className="mt-auto w-full  py-10 px-4 sm:px-6 lg:px-8 mx-auto  bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
+      <footer className=" w-full  py-10 px-4 sm:px-6 lg:px-8 mx-auto  bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
           <div className="col-span-1 lg:block">
             <a
