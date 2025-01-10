@@ -1,26 +1,35 @@
 "use client";
 import { motion } from "framer-motion";
 import { Checkout } from "@/lib/cart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { redirect } from "next/navigation";
+import { useCartContext } from "../Layout";
 
 interface Props {
   cartId: string | undefined;
-  totalx: any;
 }
 
-export default function CheckoutTab({ cartId, totalx }: Props) {
+export default function CheckoutTab({ cartId }: Props) {
+  const { optimisticData } = useCartContext();
   const [url, setUrl] = useState("");
-  const total = totalx;
-  const getTotal = async () => {
-    const x = await Checkout(cartId);
-    console.log("Total");
-    setUrl(x.data.cart.checkoutUrl);
-    console.log(x);
-  };
-  getTotal();
+  const subTotal = optimisticData.reduce((acc, item) => {
+    return (
+      acc +
+      item.node.quantity *
+        Number(item.node.merchandise.product.priceRange.minVariantPrice.amount)
+    );
+  }, 0);
+  const tax = (subTotal * 18) / 100;
+
+  useEffect(() => {
+    const fetchCheckoutUrl = async () => {
+      const x = await Checkout(cartId);
+      console.log(x);
+      setUrl(x.data.cart.checkoutUrl);
+    };
+    fetchCheckoutUrl();
+  }, [optimisticData]);
   const checkoutProceed = async () => {
-    console.log("Checkout Proceed");
     redirect(url);
   };
   return (
@@ -28,13 +37,13 @@ export default function CheckoutTab({ cartId, totalx }: Props) {
       <div className="w-full box-border bg-white shadow-md rounded-md  p-4">
         <div className="mx-[10%] text-md font-medium mb-3 flex flex-col text-zinc-600">
           <div className="flex justify-between">
-            Subtotal: <div className="">Rs {total}</div>
+            Subtotal: <div className="">Rs {subTotal}</div>
           </div>
           <div className="flex justify-between">
-            Taxes: <div className="">Rs {total}</div>
+            Taxes: <div className="">Rs {tax}</div>
           </div>
           <div className="flex justify-between">
-            Total Bill: <div className="">Rs {total}</div>
+            Total Bill: <div className="">Rs {tax + subTotal}</div>
           </div>
         </div>
         <motion.button

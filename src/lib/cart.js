@@ -100,18 +100,7 @@ export async function Checkout(cartID) {
   const query = ` 
   query checkoutURL {
     cart(id: ${cartID}){
-      checkoutUrltotalPriceV2 {
-      amount
-      currencyCode
-    }
-    subtotalPriceV2 {
-      amount
-      currencyCode
-    }
-    totalTaxV2 {
-      amount
-      currencyCode
-    }
+      checkoutUrl
     }
   }
   `;
@@ -122,7 +111,6 @@ export async function Checkout(cartID) {
 //Remove from cart
 
 export async function removeFromCart(cartID, lineIds) {
-  console.log(cartID, lineIds);
   const query = ` mutation {
     cartLinesRemove(
     cartId: ${cartID},

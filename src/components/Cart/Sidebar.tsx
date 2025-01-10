@@ -61,7 +61,7 @@ const Sidebar = () => {
                       ></CartItem>
                     </motion.div>
                   ))}
-                  <CheckoutTab cartId={cartId} totalx={""} />
+                  <CheckoutTab cartId={cartId} />
                 </div>
               </>
             ) : (
