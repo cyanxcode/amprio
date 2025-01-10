@@ -39,7 +39,9 @@ export default function OurWorld() {
                 </p>
                 <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200">
                   When the light just hit right{" "}
-                  <span className="text-blue-500">you know it's Amprio</span>
+                  <span className="text-blue-500">
+                    you know it&apos;s Amprio
+                  </span>
                 </h1>
               </div>
 
