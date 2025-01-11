@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { once } from "events";
 
 interface Props {
   gid: number;
@@ -22,7 +23,12 @@ export default function ProductCard({
   return (
     <>
       <Link href={`/product/${gid}`}>
-        <div className="w-full flex flex-col gap-3 cursor-pointer hover:bg-zinc-50 p-2 pb-4 ease-in-out duration-150 group">
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          className="w-full flex flex-col gap-3 cursor-pointer hover:bg-zinc-50 p-2 pb-4 ease-in-out duration-150 group"
+        >
           <div className="w-full aspect-square object-cover rounded-md overflow-hidden">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -49,7 +55,7 @@ export default function ProductCard({
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Link>
     </>
   );

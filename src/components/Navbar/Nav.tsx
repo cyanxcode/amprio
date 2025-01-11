@@ -16,7 +16,11 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="flex w-[100vw] px-5 lg:pr-20 h-20 items-center text-white justify-between relative bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
+      <motion.div
+        intial={{ y: "-100%" }}
+        animate={{ y: 0 }}
+        className="flex w-[100vw] px-5 lg:pr-20 h-20 items-center text-white justify-between relative bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]"
+      >
         <div className="flex items-center">
           <div className="block lg:hidden" onClick={toggleSidebar}>
             <RiMenu2Fill size={25} />
@@ -63,7 +67,7 @@ export default function Nav() {
             <CiShoppingCart size={30} />
           </motion.div>
         </div>
-      </nav>
+      </motion.div>
       <div className="gold w-full h-2"></div>
     </>
   );
