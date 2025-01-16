@@ -2,6 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,13 +11,13 @@ export default function Footer() {
       <footer className=" w-full  py-10 px-4 sm:px-6 lg:px-8 mx-auto  bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
           <div className="col-span-1 lg:block">
-            <a
+            <Link
               className="flex-none font-semibold text-xl focus:outline-none focus:opacity-80 text-white"
               href="#"
               aria-label="Brand"
             >
               <img src="/AmprioMainNoBg.png" alt="" className="w-52" />
-            </a>
+            </Link>
             <p className="mt-1 cursor-default text-xs sm:text-sm text-neutral-200 hover:text-neutral-100 focus:text-neutral-100">
               91+9897003003
             </p>
@@ -31,33 +32,33 @@ export default function Footer() {
             </h4>
 
             <div className="mt-3 grid space-y-3 text-sm">
-              <a
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 Our World
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="/FAQs"
               >
                 FAQs
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 Refunds / Returns Policy
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -67,34 +68,34 @@ export default function Footer() {
             </h4>
 
             <div className="mt-3 grid space-y-3 text-sm">
-              <a
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 <FaInstagram size={16} />
                 Instagram
-              </a>
-              <a
+              </Link>
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 <FiYoutube size={16} />
                 Youtube
-              </a>
-              <a
+              </Link>
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 <FaLinkedin size={16} />
                 Linked In
-              </a>
-              <a
+              </Link>
+              <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                 href="#"
               >
                 <FaWhatsapp size={16} />
                 Whatsapp
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -103,24 +104,24 @@ export default function Footer() {
           <div className="sm:flex sm:justify-between sm:items-center">
             <div className="flex flex-wrap items-center gap-3">
               <div className="space-x-4 text-sm">
-                <a
+                <Link
                   className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                   href="#"
                 >
                   Terms
-                </a>
-                <a
+                </Link>
+                <Link
                   className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                   href="#"
                 >
                   Privacy
-                </a>
-                <a
+                </Link>
+                <Link
                   className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
                   href="#"
                 >
                   Status
-                </a>
+                </Link>
               </div>
             </div>
           </div>
