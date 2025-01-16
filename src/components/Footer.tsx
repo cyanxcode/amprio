@@ -40,7 +40,7 @@ export default function Footer() {
 
               <a
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="/FAQs"
               >
                 FAQs
               </a>

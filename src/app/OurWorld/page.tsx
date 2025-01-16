@@ -1,13 +1,11 @@
-import FAQs from "@/components/FAQs";
-
 export default function OurWorld() {
   return (
     <>
       <div className="flex flex-col items-center mt-10 gap-20 mb-24">
         {/* Hero */}
         <div className="w-full items-center flex px-5 gap-5 flex-col-reverse lg:flex-row-reverse ">
-          <div className="w-[90vw] lg:w-[31vw] h-[36.5vw] flex justify-center flex-col px-5">
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
+          <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">
+            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
               Amprio
             </h1>
             <p className="mt-18 md:mt-2 text-lg text-gray-800">
@@ -19,7 +17,7 @@ export default function OurWorld() {
               Amprio bring warmth and brilliance to every corner of your world.
             </p>
           </div>
-          <div className="w-[90vw] lg:w-[65vw] grid place-content-center  bg-black rounded-3xl aspect-video overflow-hidden">
+          <div className="w-[90vw] lg:w-[65vw] grid place-content-center  bg-black rounded-3xl aspect-video overflow-hidden mb-5">
             <video
               src="https://cdn.shopify.com/videos/c/o/v/f7f2d726c19543b08f7139395db45dd8.mp4"
               className="w-[100%]"
@@ -39,7 +37,7 @@ export default function OurWorld() {
                 </p>
                 <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200">
                   When the light just hit right{" "}
-                  <span className="text-[#023235]">
+                  <span className="text-[#016f63]">
                     you know it&apos;s Amprio
                   </span>
                 </h1>
@@ -112,7 +110,7 @@ export default function OurWorld() {
             <div className="lg:col-span-4 mt-10 lg:mt-0">
               <img
                 className="w-full rounded-xl"
-                src="https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80"
+                src="https://cdn.shopify.com/s/files/1/0677/0085/0871/files/Glass_Globe.jpg?v=1737022677"
                 alt="Hero Image"
               />
             </div>

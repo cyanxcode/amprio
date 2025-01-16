@@ -9,7 +9,7 @@ import {
 export default function FAQs() {
   return (
     <>
-      <div className="mt-10 flex w-full flex-col items-center">
+      <div className="mt-10 flex w-full flex-col items-center" id="FAQs">
         <h2 className="w-full text-center text-6xl caveat mb-5">FAQs</h2>
         <div className=" w-[80vw] lg:w-[40vw]">
           {faqs.map((x) => (
