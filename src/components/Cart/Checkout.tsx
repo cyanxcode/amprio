@@ -19,7 +19,7 @@ export default function CheckoutTab({ cartId }: Props) {
         Number(item.node.merchandise.product.priceRange.minVariantPrice.amount)
     );
   }, 0);
-  const tax = (subTotal * 18) / 100;
+  const tax = Math.round((subTotal * 18) / 100);
 
   useEffect(() => {
     const fetchCheckoutUrl = async () => {
@@ -43,7 +43,7 @@ export default function CheckoutTab({ cartId }: Props) {
             Taxes: <div className="">Rs {tax}</div>
           </div>
           <div className="flex justify-between">
-            Total Bill: <div className="">Rs {tax + subTotal}</div>
+            Total Bill: <div className="">Rs {Math.round(tax + subTotal)}</div>
           </div>
         </div>
         <motion.button

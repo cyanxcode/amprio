@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { once } from "events";
 
 interface Props {
   gid: number;

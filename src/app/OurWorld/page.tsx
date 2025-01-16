@@ -39,7 +39,7 @@ export default function OurWorld() {
                 </p>
                 <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200">
                   When the light just hit right{" "}
-                  <span className="text-blue-500">
+                  <span className="text-[#023235]">
                     you know it&apos;s Amprio
                   </span>
                 </h1>
@@ -210,8 +210,7 @@ export default function OurWorld() {
             </div>
           </div>
         </div>
-
-        {/*Lightbrary*/}
+        {/*}=
         <div className="w-full bg-gradient-to-br from-[#023235] to-[#016f63] box-border">
           <div className="gold w-full h-2"></div>
           <h2 className="w-full flex justify-center items-start mt-10">
@@ -226,8 +225,8 @@ export default function OurWorld() {
           </div>
           <div className="gold w-full h-2"></div>
         </div>
-        {/*FAQs */}
         <FAQs />
+        {*/}
       </div>
     </>
   );

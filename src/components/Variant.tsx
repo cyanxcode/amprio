@@ -31,7 +31,7 @@ export default function Variant({ variants }: Props) {
     ...new Set(
       variants.flatMap((variant: any) =>
         variant.node.selectedOptions
-          .filter((option: any) => option.name === "Light color")
+          .filter((option: any) => option.name === "Color")
           .map((option: any) => option.value)
       )
     ),
@@ -84,18 +84,15 @@ export default function Variant({ variants }: Props) {
           </div>
           <Select
             onValueChange={(value) => updateVariant(value)}
-            defaultValue={variants[0].node.selectedOptions[0].value}
+            defaultValue={LightColor[0]}
           >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select Variant" />
             </SelectTrigger>
             <SelectContent>
               {LightColor.map((x: any) => (
-                <SelectItem
-                  key={x}
-                  value={x.replaceAll(" ", "").replace("/", "-")}
-                >
-                  {x.replace("/", "&")}
+                <SelectItem key={x} value={x}>
+                  {x}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -106,22 +103,19 @@ export default function Variant({ variants }: Props) {
       {Wattage.length != 0 && (
         <>
           <div className=" font-medium text-zinc-600 tracking-wider">
-            Watts:
+            Wattage:
           </div>
           <Select
             onValueChange={(value) => updateVariant(value)}
-            defaultValue={variants[0].node.selectedOptions[0].value}
+            defaultValue={Wattage[0]}
           >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select Variant" />
             </SelectTrigger>
             <SelectContent>
               {Wattage.map((x: any) => (
-                <SelectItem
-                  key={x}
-                  value={x.replaceAll(" ", "").replace("/", "-")}
-                >
-                  {x.replace("/", "&")}
+                <SelectItem key={x} value={x}>
+                  {x}
                 </SelectItem>
               ))}
             </SelectContent>

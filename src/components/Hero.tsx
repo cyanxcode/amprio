@@ -23,10 +23,19 @@ export default function Hero() {
         <motion.div
           initial={{ x: 100 }}
           whileInView={{ x: 0 }}
+          whileTap={{ scale: 0.98 }}
           duration={{ duration: 2 }}
           viewport={{ once: true }}
           className="bg-black w-[90vw] lg:w-[31vw] h-[36.5vw] rounded-lg"
-        ></motion.div>
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/0679/7616/7620/files/Chandelier2.jpg?v=1731744790"
+            alt=""
+            width="100%"
+            height="100%"
+            className="object-cover rounded-lg"
+          />
+        </motion.div>
       </div>
     </>
   );
