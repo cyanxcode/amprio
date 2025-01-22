@@ -16,7 +16,7 @@ export default async function Similar({ category, pageID }: Props) {
         You may also like
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 sm:gap-1 my-10 mx-2 ">
-        {filtered.map((product: any) => (
+        {filtered.slice(0, 4).map((product: any) => (
           <ProductCard
             key={product.node.id.split("/")[4]}
             gid={product.node.id.split("/")[4]}

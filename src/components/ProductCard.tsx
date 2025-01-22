@@ -22,12 +22,7 @@ export default function ProductCard({
   return (
     <>
       <Link href={`/product/${gid}`}>
-        <motion.div
-          initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true }}
-          className="w-full flex flex-col gap-3 cursor-pointer hover:bg-zinc-50 p-2 pb-4 ease-in-out duration-150 group"
-        >
+        <motion.div className="w-full flex flex-col gap-3 cursor-pointer hover:bg-zinc-50 p-2 pb-4 ease-in-out duration-150 group">
           <div className="w-full aspect-square object-cover rounded-md overflow-hidden">
             <motion.div
               whileHover={{ scale: 1.05 }}

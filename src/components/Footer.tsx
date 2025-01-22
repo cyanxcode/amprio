@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="mt-3 grid space-y-3 text-sm">
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="/OurWorld"
               >
                 Our World
               </Link>
@@ -48,14 +48,7 @@ export default function Footer() {
 
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
-              >
-                Refunds / Returns Policy
-              </Link>
-
-              <Link
-                className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="https://wa.me/919350471371"
               >
                 Contact Us
               </Link>
@@ -70,28 +63,28 @@ export default function Footer() {
             <div className="mt-3 grid space-y-3 text-sm">
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="https://www.instagram.com/theamprio"
               >
                 <FaInstagram size={16} />
                 Instagram
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="https://www.youtube.com/@futurebrighthai"
               >
                 <FiYoutube size={16} />
                 Youtube
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="https://www.linkedin.com/company/amprio"
               >
                 <FaLinkedin size={16} />
                 Linked In
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                href="#"
+                href="https://wa.me/919350471371"
               >
                 <FaWhatsapp size={16} />
                 Whatsapp
@@ -106,21 +99,9 @@ export default function Footer() {
               <div className="space-x-4 text-sm">
                 <Link
                   className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                  href="#"
+                  href="https://maps.app.goo.gl/2nTFknz4fJdmUwku6"
                 >
-                  Terms
-                </Link>
-                <Link
-                  className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                  href="#"
-                >
-                  Privacy
-                </Link>
-                <Link
-                  className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
-                  href="#"
-                >
-                  Status
+                  Map: Ghitorni, New Delhi, Delhi 110030
                 </Link>
               </div>
             </div>

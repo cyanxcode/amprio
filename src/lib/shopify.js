@@ -86,7 +86,7 @@ export async function getProductByID(id) {
 //get produtcs of same category
 export async function similarProducts(category) {
   const query = `{
-          products(query: "product_type:${category} ", first:4) {
+          products(query: "product_type:${category} ", first:5) {
             edges{
               node {
                 id
