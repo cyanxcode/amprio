@@ -11,7 +11,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { getCookie } from "@/components/Backend";
 
 import "./globals.css";
-import { Italiana } from "next/font/google";
+import { Italiana, Quicksand, Prata } from "next/font/google";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 export const metadata: Metadata = {
@@ -23,6 +23,16 @@ const italiana = Italiana({
   weight: ["400"],
   variable: "--font-italiana",
 });
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-quicksand",
+});
+const prata = Prata({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-Prata",
+});
 
 export default async function RootLayout({
   children,
@@ -30,7 +40,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${italiana.variable}`}>
+    <html
+      lang="en"
+      className={`${italiana.variable} ${quicksand.variable} ${prata.variable}`}
+    >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -39,7 +52,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`overflow-x-hidden`}>
+      <body className={`overflow-x-hidden font-quicksand`}>
         <SpeedInsights />
         <Template>
           <ReactQueryProvider>

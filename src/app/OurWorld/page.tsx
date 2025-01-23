@@ -5,7 +5,7 @@ export default function OurWorld() {
         {/* Hero */}
         <div className="w-full items-center flex px-5 gap-5 flex-col-reverse lg:flex-row-reverse ">
           <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">
-            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl font-prata">
               Amprio
             </h1>
             <p className="mt-18 md:mt-2 text-lg text-gray-800">
@@ -31,7 +31,7 @@ export default function OurWorld() {
         <div className="overflow-hidden">
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
-              <div className="text-center">
+              <div className="text-center font-prata">
                 <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-neutral-200">
                   Best lighting solutions
                 </p>
@@ -93,10 +93,10 @@ export default function OurWorld() {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
             <div className="lg:col-span-3">
-              <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
+              <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl font-prata">
                 Illuminate Your World
               </h1>
-              <p className="mt-3 text-lg text-gray-800 dark:text-neutral-400">
+              <p className="mt-3 text-lg text-gray-800 ">
                 At Amprio, we redefine lighting with innovative solutions that
                 brighten your spaces and elevate your lifestyle. From
                 energy-efficient LEDs to stylish designs, our lights are crafted

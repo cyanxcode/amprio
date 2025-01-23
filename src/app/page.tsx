@@ -18,7 +18,7 @@ export default async function Main() {
         <h2 className="w-full text-center text-6xl font-italiana">
           Best Sellers
         </h2>
-        <DisplayByTag tag={"Best"} />
+        <DisplayByTag tag={"Best Seller"} />
       </div>
       <Quote index={1} />
       <div className=" my-10">

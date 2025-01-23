@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         italiana: ["var(--font-italiana)", "cursive"],
+        quicksand: ["var(--font-quicksand)", "sans-serif"],
+        prata: ["var(--font-Prata)", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",
