@@ -45,7 +45,7 @@ export default function ProductCard({
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 text-sm sm:text-md ">
               <p>Rs {Number(price).toFixed(2)}</p>
               <p className="text-zinc-700 font-normal text-xs sm:text-sm line-through italic">
-                Rs {Number(maxPrice).toFixed(2)}
+                {Number(maxPrice) ? <>Rs {Number(maxPrice).toFixed(2)}</> : ""}
               </p>
             </div>
           </div>

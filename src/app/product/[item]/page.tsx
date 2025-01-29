@@ -4,6 +4,7 @@ import Link from "next/link";
 import AddToCartBtn from "@/components/Cart/AddToCart";
 import { getProductByID } from "@/lib/shopify";
 import { cookies } from "next/headers";
+import Price from "@/components/Price";
 
 export default async function ProductDetails({
   params,
@@ -16,7 +17,7 @@ export default async function ProductDetails({
   //fetch product details
   const response = await getProductByID(item);
   const product = response.data.product;
-
+  console.log(product);
   //cookies cartID
   const cookieStore = await cookies();
   const cartId = cookieStore.get("cartId");
@@ -36,17 +37,8 @@ export default async function ProductDetails({
             </Link>
             <h3 className="text-2xl cursor-default">{product.title}</h3>
           </div>
-          <div className="flex gap-4 items-center cursor-default">
-            <h4>
-              Rs {Number(product.priceRange.minVariantPrice.amount).toFixed(2)}
-            </h4>
-            <h5 className="text-zinc-700 text-sm line-through">
-              Rs{" "}
-              {Number(
-                product.compareAtPriceRange.minVariantPrice.amount
-              ).toFixed(2)}
-            </h5>
-          </div>
+          <Price product={product} />
+
           <Variant variants={product.variants.edges} />
           <AddToCartBtn
             cartId={cartId?.value}
@@ -68,9 +60,10 @@ export default async function ProductDetails({
               },
             }}
           />
-          <p className="text-sm leading-6 cursor-default">
-            {product.description}
-          </p>
+          <p
+            className="text-sm leading-6 cursor-default"
+            dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+          ></p>
         </div>
       </div>
       <Similar category={product.productType} pageID={product.id} />

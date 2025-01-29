@@ -11,7 +11,7 @@ interface Props {
 
 export default function CheckoutTab({ cartId }: Props) {
   const { optimisticData } = useCartContext();
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("https://www.google.com");
   const subTotal = optimisticData.reduce((acc, item) => {
     return (
       acc +
@@ -22,13 +22,17 @@ export default function CheckoutTab({ cartId }: Props) {
   const tax = Math.round((subTotal * 18) / 100);
 
   useEffect(() => {
+    if (cartId === undefined) {
+      console.log("Cart ID is undefined");
+      return;
+    }
     const fetchCheckoutUrl = async () => {
       const x = await Checkout(cartId);
       console.log(x);
       setUrl(x.data.cart.checkoutUrl);
     };
     fetchCheckoutUrl();
-  }, [optimisticData]);
+  }, [optimisticData, cartId]);
   const checkoutProceed = async () => {
     redirect(url);
   };

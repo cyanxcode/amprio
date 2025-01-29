@@ -97,14 +97,16 @@ export async function updateCart(cartID, variantID, quantity) {
 
 // Checkout
 export async function Checkout(cartID) {
+  console.log(cartID);
   const query = ` 
   query checkoutURL {
     cart(id: ${cartID}){
       checkoutUrl
-    }
+    } 
   }
   `;
   const response = await shopifyAPI.post("", { query });
+  console.log(response);
   return response.data;
 }
 

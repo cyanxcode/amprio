@@ -50,12 +50,18 @@ export async function getProductByID(id) {
             id
             title
             productType
-            description
+            descriptionHtml
             variants(first: 10) {
               edges {
                 node {
                   id
                   title
+                  price {
+                    amount
+                  }
+                  compareAtPrice {
+                    amount
+                  }
                   selectedOptions {
                     name
                     value

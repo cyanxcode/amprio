@@ -48,6 +48,7 @@ export default function Footer() {
 
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                target="_blank"
                 href="https://wa.me/919350471371"
               >
                 Contact Us
@@ -63,6 +64,7 @@ export default function Footer() {
             <div className="mt-3 grid space-y-3 text-sm">
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                target="_blank"
                 href="https://www.instagram.com/theamprio"
               >
                 <FaInstagram size={16} />
@@ -70,6 +72,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                target="_blank"
                 href="https://www.youtube.com/@futurebrighthai"
               >
                 <FiYoutube size={16} />
@@ -77,6 +80,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                target="_blank"
                 href="https://www.linkedin.com/company/amprio"
               >
                 <FaLinkedin size={16} />
@@ -84,6 +88,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                target="_blank"
                 href="https://wa.me/919350471371"
               >
                 <FaWhatsapp size={16} />
@@ -99,6 +104,7 @@ export default function Footer() {
               <div className="space-x-4 text-sm">
                 <Link
                   className="inline-flex items-center gap-x-2 focus:outline-none text-neutral-200 hover:text-neutral-100 focus:text-neutral-100"
+                  target="_blank"
                   href="https://maps.app.goo.gl/2nTFknz4fJdmUwku6"
                 >
                   Map: Ghitorni, New Delhi, Delhi 110030

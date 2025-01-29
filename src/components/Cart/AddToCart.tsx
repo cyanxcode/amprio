@@ -29,6 +29,9 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
   }, [variant, optimisticData]);
 
   const AddItem = async () => {
+    const selectedVariant = variants.find(
+      (x: any) => x.node.id == "gid://shopify/ProductVariant/" + variant
+    );
     React.startTransition(() => {
       addOptimisticData({
         node: {
@@ -37,12 +40,15 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
           cartLinesId: "",
           merchandise: {
             ...item.merchandise,
-            title: variants.find(
-              (x: any) => x.node.id == "gid://shopify/ProductVariant/" + variant
-            ).node.title,
+            title: selectedVariant.node.title,
             product: {
               ...item.merchandise.product,
               id: "gid://shopify/ProductVariant/" + variant,
+              priceRange: {
+                minVariantPrice: {
+                  amount: selectedVariant.node.price.amount,
+                },
+              },
             },
           },
         },
@@ -76,19 +82,14 @@ export default function AddToCartBtn({ cartId, item, variants }: Props) {
             cartLinesId: cartLine,
             quantity: 1,
             merchandise: {
-              title: variants.find(
-                (x: any) =>
-                  x.node.id == "gid://shopify/ProductVariant/" + variant
-              ).node.title,
+              title: selectedVariant.node.title,
               product: {
                 id: "gid://shopify/ProductVariant/" + variant,
                 title: item.merchandise.product.title,
                 img: item.merchandise.img,
                 priceRange: {
                   minVariantPrice: {
-                    amount:
-                      item.merchandise.product.priceRange.minVariantPrice
-                        .amount,
+                    amount: selectedVariant.node.price.amount,
                   },
                 },
               },
