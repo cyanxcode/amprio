@@ -2,10 +2,9 @@ import axios from "axios";
 
 //set default connection snippet
 export const shopifyAPI = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN,
+  baseURL: "https://amprioshop.myshopify.com/api/2024-10/graphql.json",
   headers: {
-    "X-Shopify-Storefront-Access-Token":
-      process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+    "X-Shopify-Storefront-Access-Token": "a3ee4d8f2feaeb80cc4081ff7552a194",
     "Content-Type": "application/json",
   },
 });
