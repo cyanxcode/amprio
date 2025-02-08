@@ -9,20 +9,22 @@ export default async function Main() {
     <>
       <Hero />
       <div className=" mt-10">
-        <div className="w-full font-italiana text-center text-6xl">
+        <div className="w-full font-italiana text-center text-3xl md:text-6xl">
           New Arrivals
         </div>
         <DisplayByTag tag={"New Arrival"} />
       </div>
       <div className=" mt-10">
-        <h2 className="w-full text-center text-6xl font-italiana">
+        <h2 className="w-full text-center text-3xl md:text-6xl font-italiana">
           Best Sellers
         </h2>
         <DisplayByTag tag={"Best Seller"} />
       </div>
       <Quote index={1} />
       <div className=" my-10">
-        <h2 className="w-full text-center text-6xl font-italiana">Reviews</h2>
+        <h2 className="w-full text-center text-3xl md:text-6xl font-italiana">
+          Reviews
+        </h2>
       </div>
       <Reviews />
       <FAQs />
