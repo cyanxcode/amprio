@@ -45,6 +45,15 @@ export default function Variant({ variants }: Props) {
       )
     ),
   ];
+  const Body = [
+    ...new Set(
+      variants.flatMap((variant: any) =>
+        variant.node.selectedOptions
+          .filter((option: any) => option.name === "Body")
+          .map((option: any) => option.value)
+      )
+    ),
+  ];
 
   const updateVariant = (value: string) => {
     variants.map((variant) => {
@@ -59,24 +68,6 @@ export default function Variant({ variants }: Props) {
   };
   return (
     <>
-      {/* 
-      <div className=" font-medium text-zinc-600 tracking-wider">Colors:</div>
-      <div className="flex gap-2">
-        {LightColor.map((x: any) => (
-          <div key={x} className="grid place-items-center">
-            <input
-              type="radio"
-              name="color"
-              defaultChecked
-              className={`appearance-none w-6 h-6 border-2 border-zinc-200 rounded-full  p-2`}
-              id=""
-              value={x.replaceAll(" ", "").replace("/", "-")}
-            />
-            <div className="absolute w-4 h-4 rounded-full peer-checked:bg-blue-300"></div>
-          </div>
-        ))}
-      </div>*/}
-
       {LightColor.length != 0 && (
         <>
           <div className=" font-medium text-zinc-600 tracking-wider">
@@ -91,6 +82,29 @@ export default function Variant({ variants }: Props) {
             </SelectTrigger>
             <SelectContent>
               {LightColor.map((x: any) => (
+                <SelectItem key={x} value={x}>
+                  {x}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>{" "}
+        </>
+      )}
+
+      {Body.length != 0 && (
+        <>
+          <div className="font-medium text-zinc-600 tracking-wider">
+            Body Color:
+          </div>
+          <Select
+            onValueChange={(value) => updateVariant(value)}
+            defaultValue={Body[0]}
+          >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Select Variant" />
+            </SelectTrigger>
+            <SelectContent>
+              {Body.map((x: any) => (
                 <SelectItem key={x} value={x}>
                   {x}
                 </SelectItem>
