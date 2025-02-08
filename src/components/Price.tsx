@@ -16,11 +16,11 @@ const Price = ({ product }: Props) => {
   return (
     <>
       <div className="flex gap-4 items-center cursor-default">
-        <h4>Rs {selectedVariant.node.price.amount}</h4>
+        <h4>₹ {selectedVariant.node.price.amount}</h4>
         <h5 className="text-zinc-700 text-sm line-through">
           {Number(product.compareAtPriceRange.minVariantPrice.amount) ? (
             <>
-              Rs
+              ₹
               {Number(
                 product.compareAtPriceRange.minVariantPrice.amount
               ).toFixed(2)}

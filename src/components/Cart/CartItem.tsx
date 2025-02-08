@@ -184,7 +184,7 @@ export default function CartItem({
                     <RxCross2 size={14} />
                   </motion.button>
                 </div>
-                <h3 className="font-medium text-zinc-800 ml-2">Rs {price}</h3>
+                <h3 className="font-medium text-zinc-800 ml-2">₹ {price}</h3>
                 <div className="flex justify-between">
                   <div className="flex gap-2 items-center ml-2 text-zinc-500">
                     <button onClick={subtractQuantity}>

@@ -41,13 +41,13 @@ export default function CheckoutTab({ cartId }: Props) {
       <div className="w-full box-border bg-white shadow-md rounded-md  p-4">
         <div className="mx-[10%] text-md font-medium mb-3 flex flex-col text-zinc-600">
           <div className="flex justify-between">
-            Subtotal: <div className="">Rs {subTotal}</div>
+            Subtotal: <div className="">₹ {subTotal}</div>
           </div>
           <div className="flex justify-between">
-            Taxes: <div className="">Rs {tax}</div>
+            Taxes: <div className="">₹ {tax}</div>
           </div>
           <div className="flex justify-between">
-            Total Bill: <div className="">Rs {Math.round(tax + subTotal)}</div>
+            Total Bill: <div className="">₹ {Math.round(tax + subTotal)}</div>
           </div>
         </div>
         <motion.button
