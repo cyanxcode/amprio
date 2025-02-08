@@ -9,12 +9,10 @@ export default function OurWorld() {
               Amprio
             </h1>
             <p className="mt-18 md:mt-2 text-lg text-gray-800">
-              At Amprio, we redefine lighting with innovative solutions that
-              brighten your spaces and elevate your lifestyle. From
-              energy-efficient LEDs to stylish designs, our lights are crafted
-              to blend functionality with elegance. Discover the perfect
-              illumination for homes, offices, and outdoor settings, and let
-              Amprio bring warmth and brilliance to every corner of your world.
+              Amprio is transforming the way you light up your world. Our
+              innovative solutions bring both style and functionality to your
+              spaces. Brighten your home, office, or outdoor areas with Amprio,
+              and experience a whole new level of warmth and brilliance.
             </p>
           </div>
           <div className="w-[90vw] lg:w-[65vw] grid place-content-center  bg-black rounded-3xl aspect-video overflow-hidden mb-5">
