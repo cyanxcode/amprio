@@ -19,7 +19,7 @@ export default function Footer() {
               <img src="/AmprioMainNoBg.png" alt="" className="w-52" />
             </Link>
             <p className="mt-1 cursor-default text-xs sm:text-sm text-neutral-200 hover:text-neutral-100 focus:text-neutral-100">
-              91+9897003003
+              +91 9350471371
             </p>
             <p className="mt-3 cursor-default text-xs sm:text-sm text-neutral-200 hover:text-neutral-100 focus:text-neutral-100">
               © 2025 AMPRIO.

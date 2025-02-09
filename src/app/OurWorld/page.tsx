@@ -1,7 +1,7 @@
 export default function OurWorld() {
   return (
     <>
-      <div className="flex flex-col items-center mt-10 gap-20 mb-24">
+      <div className="flex flex-col items-center mt-10 gap-20 mb-24 text-[#023235]">
         {/* Hero */}
         <div className="w-full items-center flex px-5 gap-5 flex-col-reverse lg:flex-row-reverse ">
           <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">

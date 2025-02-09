@@ -16,7 +16,7 @@ export const categories = [
   },
   {
     title: "Smart Lights",
-    href: "/Chandeliers",
+    href: "/Smart Lights",
   },
   {
     title: "Our World",

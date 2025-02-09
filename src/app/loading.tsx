@@ -7,7 +7,7 @@ export default function Loading() {
           <div className="mt-6 lg:mt-10">
             <p className="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium text-gray-800">
               <svg
-                className="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-200 sm:h-24 sm:w-24 dark:text-neutral-700"
+                className="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-200 sm:h-24 sm:w-24"
                 width="16"
                 height="13"
                 viewBox="0 0 16 13"
@@ -20,7 +20,7 @@ export default function Loading() {
                   fill="currentColor"
                 />
               </svg>
-              <span className="relative z-10 italic text-gray-800 dark:text-neutral-200">
+              <span className="relative z-10 italic text-gray-800">
                 {quotes[Math.floor(Math.random() * 14) + 1]}
               </span>
             </p>
