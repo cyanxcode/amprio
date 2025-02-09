@@ -5,9 +5,7 @@ export default function OurWorld() {
         {/* Hero */}
         <div className="w-full items-center flex px-5 gap-5 flex-col-reverse lg:flex-row-reverse ">
           <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">
-            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl font-prata">
-              Amprio
-            </h1>
+            <img src="/AmprioWhite.png" alt="" />
             <p className="mt-18 md:mt-2 text-lg text-gray-800">
               Amprio is transforming the way you light up your world. Our
               innovative solutions bring both style and functionality to your
