@@ -19,7 +19,7 @@ import Link from "next/link";
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarContent className="bg-gradient-to-br from-[#023235] via-[#016f63] to-[#023235]">
+      <SidebarContent className="bg-gradient-to-br bg-[#023235]">
         <SidebarGroup />
         <SidebarGroupLabel>
           <div className="text-lg">
@@ -33,7 +33,7 @@ export function AppSidebar() {
                 item.href ? (
                   <Link href={item.href} key={item.title}>
                     <div
-                      className="text-white font-semibold py-4 border-b border-white hover:underline"
+                      className="text-white font-semibold py-4 px-10 rounded-md border-b border-white hover:bg-[#016f63]"
                       key={item.title}
                     >
                       {item.title}
@@ -41,7 +41,7 @@ export function AppSidebar() {
                   </Link>
                 ) : (
                   <AccordionItem value={item.title} key={item.title}>
-                    <AccordionTrigger className="text-white font-semibold">
+                    <AccordionTrigger className="text-white font-semibold px-10 rounded-md hover:bg-[#016f63]">
                       {item.title}
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col gap-1 text-white font-medium">
@@ -50,7 +50,7 @@ export function AppSidebar() {
                           <Link
                             key={x.title}
                             href={x.href}
-                            className="p-2 rounded-md hover:underline"
+                            className="py-2 px-10 rounded-md hover:bg-[#016f63]"
                           >
                             <span>{x.title}</span>
                           </Link>

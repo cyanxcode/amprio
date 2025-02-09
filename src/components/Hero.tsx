@@ -26,10 +26,10 @@ export default function Hero() {
           whileTap={{ scale: 0.98 }}
           duration={{ duration: 2 }}
           viewport={{ once: true }}
-          className="bg-black w-[90vw] lg:w-[31vw] h-[36.5vw] rounded-lg hidden lg:block"
+          className="bg-[#023235] w-[90vw] lg:w-[31vw] h-[36.5vw] rounded-lg hidden lg:grid place-content-center"
         >
           <img
-            src="https://cdn.shopify.com/s/files/1/0679/7616/7620/files/Chandelier2.jpg?v=1731744790"
+            src="/AmprioNoBg.png"
             alt=""
             width="100%"
             height="100%"

@@ -19,7 +19,7 @@ export default function Nav() {
       <motion.div
         intial={{ y: "-100%" }}
         animate={{ y: 0 }}
-        className="flex w-[100vw] px-5 lg:pr-20 h-20 items-center text-white justify-between relative bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]"
+        className="flex w-[100vw] px-5 lg:pr-20 h-24 items-center text-white justify-between relative bg-gradient-to-r from-[#023235] via-[#016f63] to-[#023235]"
       >
         <div className="flex items-center">
           <div className="block lg:hidden" onClick={toggleSidebar}>
@@ -29,17 +29,17 @@ export default function Nav() {
             <img
               src="/AmprioMainNoBg.png"
               alt="Amprio"
-              className=" w-52 lg:w-72"
+              className=" w-52 lg:w-96 mt-3"
             />
           </Link>
         </div>
-        <nav className=" hidden w-full text-md h-10 lg:flex gap-10 items-center justify-center text-white">
+        <nav className=" hidden w-full text-md h-10 lg:flex gap-10 items-center justify-center text-[#f2ea82]">
           {categories.map((x) => (
             <div key={x.title} className="relative group h-full ">
-              <div className="h-full flex items-center font-semibold uppercase tracking-widest">
+              <div className="h-full flex items-center font-semibold uppercase tracking-widest font-italiana text-xl">
                 <Link href={x.href ? x.href : ""}>{x.title}</Link>
               </div>
-              <div className="absolute z-20 group-hover:flex flex-col bg-[#016f63] hidden w-auto h-auto rounded-t-none shadow-sm rounded-md left-1/2 -translate-x-1/2">
+              <div className="absolute z-20 font-italiana font-semibold text-lg text-[#f2ea82] group-hover:flex flex-col bg-[#016f63] hidden w-auto h-auto rounded-t-none shadow-sm rounded-md left-1/2 -translate-x-1/2">
                 {x.subCategories?.map((y) => (
                   <Link
                     key={y.title}

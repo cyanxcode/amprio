@@ -8,7 +8,7 @@ export const categories = [
     ],
   },
   {
-    title: "Designer",
+    title: "Decor",
     subCategories: [
       { title: "Wall Lights", href: "/Wall Light" },
       { title: "Chandeliers", href: "/Chandeliers" },
