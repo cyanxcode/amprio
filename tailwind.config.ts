@@ -13,6 +13,7 @@ const config: Config = {
         italiana: ["var(--font-italiana)", "cursive"],
         quicksand: ["var(--font-quicksand)", "sans-serif"],
         prata: ["var(--font-Prata)", "serif"],
+        cinzel: ["var(--font-Cinzel_Decorative)", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",

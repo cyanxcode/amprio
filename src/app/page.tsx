@@ -9,10 +9,10 @@ export default async function Main() {
   return (
     <>
       <Hero />
-      <Link href="/">
+      <Link href="/Smart Lights">
         <img
           src="https://cdn.shopify.com/s/files/1/0677/0085/0871/files/5.png?v=1739046379"
-          className="w-full my-20 hidden md:block"
+          className="w-full my-20 "
           alt=""
         />
       </Link>

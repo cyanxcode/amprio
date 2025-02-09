@@ -5,6 +5,10 @@ export const categories = [
       { title: "Cob Light", href: "/COB Light" },
       { title: "Foot Light", href: "/Foot Light" },
       { title: "Track Light", href: "/Track Light" },
+      { title: "Nisch Light", href: "/Nisch Light" },
+      { title: "Stricker Light", href: "/Stricker Light" },
+      { title: "Burial Light", href: "/Burial Light" },
+      { title: "Spike Light", href: "/Spike Light" },
     ],
   },
   {
@@ -12,6 +16,7 @@ export const categories = [
     subCategories: [
       { title: "Wall Lights", href: "/Wall Light" },
       { title: "Chandeliers", href: "/Chandeliers" },
+      { title: "Mirror Light", href: "/Mirror Light" },
     ],
   },
   {

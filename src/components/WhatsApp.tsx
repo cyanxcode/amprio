@@ -11,7 +11,7 @@ export default function WhatsApp() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src="/Whatsapp2.png"></img>
+          <img src="/WhatsApp.svg.webp"></img>
         </motion.div>
       </Link>
     </>

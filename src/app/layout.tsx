@@ -11,7 +11,12 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { getCookie } from "@/components/Backend";
 
 import "./globals.css";
-import { Italiana, Quicksand, Prata } from "next/font/google";
+import {
+  Italiana,
+  Quicksand,
+  Prata,
+  Cinzel_Decorative,
+} from "next/font/google";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 export const metadata: Metadata = {
@@ -33,6 +38,11 @@ const prata = Prata({
   weight: ["400"],
   variable: "--font-Prata",
 });
+const cinzel = Cinzel_Decorative({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-Cinzel_Decorative",
+});
 
 export default async function RootLayout({
   children,
@@ -42,7 +52,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${italiana.variable} ${quicksand.variable} ${prata.variable}`}
+      className={`${italiana.variable} ${quicksand.variable} ${prata.variable} ${cinzel.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

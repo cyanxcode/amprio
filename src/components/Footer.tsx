@@ -2,6 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -107,6 +108,7 @@ export default function Footer() {
                   target="_blank"
                   href="https://maps.app.goo.gl/2nTFknz4fJdmUwku6"
                 >
+                  <FaMapMarkerAlt size={16} />
                   Map: Ghitorni, New Delhi, Delhi 110030
                 </Link>
               </div>
