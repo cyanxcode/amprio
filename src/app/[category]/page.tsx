@@ -1,3 +1,4 @@
+import HeroX from "@/components/HeroX";
 import ProductList from "@/components/ProductList";
 
 export default async function Category({ params }: any) {
@@ -5,11 +6,7 @@ export default async function Category({ params }: any) {
   const category = param.category;
   return (
     <>
-      <div className="flex mt-16 w-full lg:px-20 justify-center items-center">
-        <h2 className="text-4xl font-italiana sm:text-6xl cursor-default text-[#023235]">
-          {category.replace("%20", " ")}
-        </h2>
-      </div>
+      <HeroX category={category.replace("%20", " ")} />
       <ProductList category={category.replace("%20", " ")} />
     </>
   );

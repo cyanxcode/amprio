@@ -14,6 +14,8 @@ const config: Config = {
         quicksand: ["var(--font-quicksand)", "sans-serif"],
         prata: ["var(--font-Prata)", "serif"],
         cinzel: ["var(--font-Cinzel_Decorative)", "serif"],
+        play: ["var(--font-Playfair_Display)", "serif"],
+        poppins: ["var(--font-Poppins)", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",

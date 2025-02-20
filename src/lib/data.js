@@ -56,3 +56,12 @@ export const faqs = [
     Answer: "Delivery is done within 14 to 30 days of order.",
   },
 ];
+
+export const description = {
+  Chandeliers:
+    "Chandeliers are elegant light fixtures that serve as both functional and decorative elements in a room. Typically suspended from the ceiling, they feature multiple arms or branches adorned with lights, crystals, or other decorative materials. Chandeliers come in various styles, from classic and opulent to modern and minimalist, offering a touch of sophistication and luxury. They are commonly used in dining rooms, living spaces, and entryways, casting a warm, ambient glow and elevating the aesthetic of any space.",
+  COBLight:
+    "COB (Chip-on-Board) lights are a type of LED lighting that provides a high level of brightness with energy efficiency. They consist of multiple LED chips mounted directly onto a single board, creating a uniform light source. This design results in a compact and powerful light, ideal for various applications, including commercial, residential, and automotive lighting. COB lights are known for their longevity and ability to produce consistent, high-quality light without the need for bulky fixtures.",
+  WallLight:
+    "Wall lights are lighting fixtures mounted on walls to provide both functional and decorative illumination. They can be used to highlight specific areas, create ambient lighting, or add an aesthetic touch to a room. Available in various styles, from modern to classic, wall lights come in forms like sconces, picture lights, or accent lamps. They are ideal for saving space while enhancing the atmosphere of living rooms, hallways, or bedrooms. Wall lights are versatile, offering focused or diffused light depending on the design.",
+};

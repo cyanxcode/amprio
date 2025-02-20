@@ -16,6 +16,8 @@ import {
   Quicksand,
   Prata,
   Cinzel_Decorative,
+  Playfair_Display,
+  Poppins,
 } from "next/font/google";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
 
@@ -43,6 +45,16 @@ const cinzel = Cinzel_Decorative({
   weight: ["400"],
   variable: "--font-Cinzel_Decorative",
 });
+const play = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-Playfair_Display",
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-Poppins",
+});
 
 export default async function RootLayout({
   children,
@@ -52,7 +64,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${italiana.variable} ${quicksand.variable} ${prata.variable} ${cinzel.variable}`}
+      className={`${italiana.variable} ${quicksand.variable} ${prata.variable} ${cinzel.variable} ${play.variable} ${poppins.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
