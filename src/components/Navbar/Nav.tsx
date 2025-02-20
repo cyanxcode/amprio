@@ -29,7 +29,7 @@ export default function Nav() {
             <img
               src="/AmprioMainNoBg.png"
               alt="Amprio"
-              className=" w-52 lg:w-96 mt-3"
+              className=" w-52 lg:w-96 mt-1 lg:mt-3"
             />
           </Link>
         </div>

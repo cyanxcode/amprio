@@ -32,8 +32,9 @@ export default function HeroX({ category }: Props) {
               <div className="mt-5 max-w-3xl">
                 <p className="text-lg text-gray-600">
                   {
-                    // @ts-expect-error
-                    description[category.replace(" ", "")]
+                    description[
+                      category.replace(" ", "") as keyof typeof description
+                    ]
                   }
                 </p>
               </div>
