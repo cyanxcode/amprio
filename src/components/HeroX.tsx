@@ -32,7 +32,7 @@ export default function HeroX({ category }: Props) {
               <div className="mt-5 max-w-3xl">
                 <p className="text-lg text-gray-600">
                   {
-                    // @ts-ignore
+                    // @ts-expect-error
                     description[category.replace(" ", "")]
                   }
                 </p>
