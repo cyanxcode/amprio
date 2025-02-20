@@ -17,7 +17,7 @@ export default function FAQs() {
           {faqs.map((x) => (
             <Accordion type="single" key={x.Question} collapsible>
               <AccordionItem value={x.Question}>
-                <AccordionTrigger>{x.Question}</AccordionTrigger>
+                <AccordionTrigger>Q. {x.Question}</AccordionTrigger>
                 <AccordionContent>{x.Answer}</AccordionContent>
               </AccordionItem>
             </Accordion>

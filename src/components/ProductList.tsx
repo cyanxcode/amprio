@@ -14,7 +14,14 @@ const ProductList = ({ category }: Props) => {
     queryKey: [category],
     queryFn: async () => {
       const { data } = await getAllProducts(category);
-      return data.products.edges;
+      const priorityItem = data.products.edges.filter((product: any) =>
+        product.node.tags.includes("+1")
+      );
+      const normalItem = data.products.edges.filter(
+        (product: any) => !product.node.tags.includes("+1")
+      );
+
+      return [...priorityItem, ...normalItem];
     },
   });
 

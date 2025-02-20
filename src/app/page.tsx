@@ -17,7 +17,7 @@ export default async function Main() {
         />
       </Link>
       <div className=" mt-10">
-        <h2 className="w-full text-center text-3xl md:text-6xl font-italiana text-[#023235]">
+        <h2 className="w-full text-center text-4xl md:text-6xl font-italiana text-[#023235]">
           Best Sellers
         </h2>
         <DisplayByTag tag={"Best Seller"} />
@@ -30,14 +30,14 @@ export default async function Main() {
         />
       </Link>
       <div className=" mt-10">
-        <div className="w-full font-italiana text-center text-3xl md:text-6xl text-[#023235]">
+        <div className="w-full font-italiana text-center text-4xl md:text-6xl text-[#023235]">
           New Arrivals
         </div>
         <DisplayByTag tag={"New Arrival"} />
       </div>
       <Quote index={1} />
       <div className=" my-10">
-        <h2 className="w-full text-center text-3xl md:text-6xl font-italiana text-[#023235]">
+        <h2 className="w-full text-center text-4xl md:text-6xl font-italiana text-[#023235]">
           Reviews
         </h2>
       </div>
