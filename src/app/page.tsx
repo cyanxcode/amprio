@@ -1,5 +1,4 @@
 import DisplayByTag from "@/components/DisplayByTag";
-import Quote from "@/components/Quote";
 import Reviews from "@/components/Reviews";
 import FAQs from "../components/FAQs";
 import Hero from "@/components/Hero";
