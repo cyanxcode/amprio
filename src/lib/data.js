@@ -2,31 +2,55 @@ export const categories = [
   {
     title: "Architectural",
     subCategories: [
-      { title: "Cob Light", href: "/COB Light" },
+      { title: "Limited Edition", href: "/Limited Edition" },
+      { title: "Radiant Collection", href: "/Radiant Collection" },
+      { title: "COB Down Light", href: "/COB Down Light" },
       { title: "Magnetic Track Light", href: "/Magnetic Track Light" },
+      { title: "Track Light", href: "/Track Light" },
+      { title: "Panel Light", href: "/Pranel Light" },
+      { title: "Linear Laser Light", href: "/Linear Laser Light" },
+      { title: "Tricolor Light", href: "/Tricolor Light" },
       { title: "Profile Light", href: "/Profile Light" },
-      { title: "Down Light", href: "/Down Light" },
       { title: "LED Strip Light", href: "/LED Strip Light" },
       { title: "Foot Light", href: "/Foot Light" },
-      { title: "Track Light", href: "/Track Light" },
-      { title: "Nisch Light", href: "/Nisch Light" },
-      { title: "Stricker Light", href: "/Stricker Light" },
-      { title: "Burial Light", href: "/Burial Light" },
-      { title: "Spike Light", href: "/Spike Light" },
-      { title: "Radiant Collection", href: "/Radiant Collection" },
+      { title: "Niche Light", href: "/Niche Light" },
+      { title: "Outdoor Light", href: "/Outdoor Light" },
     ],
   },
   {
     title: "Decor",
     subCategories: [
-      { title: "Wall Lights", href: "/Wall Light" },
+      { title: "Limited Edition", href: "/Limited Edition" },
+      {
+        title: "Double Height Chandeliers",
+        href: "/Double Height Chandeliers",
+      },
+      { title: "Customized Chandeliers", href: "/Customized Chandeliers" },
       { title: "Chandeliers", href: "/Chandeliers" },
+      { title: "Fandeliers", href: "/Fandeliers" },
+      { title: "Wall Lights", href: "/Wall Light" },
+      { title: "Pendant Lights", href: "/Pendant Lights" },
+      { title: "Hanging Cluster Lights", href: "/Hanging Cluster Lights" },
       { title: "Mirror Light", href: "/Mirror Light" },
+      { title: "Table Lamps", href: "/Table Lamps" },
+      { title: "Floor Lamps", href: "/Floor Lamps" },
     ],
   },
   {
     title: "Smart Lights",
-    href: "/Smart Lights",
+    subCategories: [
+      { title: "Limited Edition", href: "/Limited Edition" },
+      {
+        title: "COB Down Light",
+        href: "/COB Down Light",
+      },
+      {
+        title: "Magnetic Track Light",
+        href: "/Magnetic Track Light",
+      },
+      { title: "Profile Light", href: "/Profile Light" },
+      { title: "LED Strip Light", href: "/LED Strip Light" },
+    ],
   },
   {
     title: "Our World",
@@ -106,4 +130,28 @@ export const description = {
     "Wall lights are lighting fixtures mounted on walls to provide both functional and decorative illumination. They can be used to highlight specific areas, create ambient lighting, or add an aesthetic touch to a room. Available in various styles, from modern to classic, wall lights come in forms like sconces, picture lights, or accent lamps. They are ideal for saving space while enhancing the atmosphere of living rooms, hallways, or bedrooms. Wall lights are versatile, offering focused or diffused light depending on the design.",
   MagneticTrackLight:
     "Magnetic track lights feature a flexible mounting system, allowing easy repositioning of light heads along the track. Ideal for highlighting specific areas or art pieces, these lights offer a modern, customizable lighting solution for both home and retail environments.",
+  ProfileLight:
+    "Profile lights are sleek, low-profile lighting solutions that blend seamlessly into architectural designs. These lights are ideal for accenting edges, corners, or coves, offering a clean and minimalistic look that enhances any contemporary space.",
+  DownLight:
+    "Downlights are recessed ceiling lights that provide focused, directional light, perfect for general illumination in kitchens, bathrooms, or hallways. Their discreet design helps maintain a clean and modern aesthetic while offering effective lighting.",
+  LEDStripLight:
+    "LED strip lights are flexible, adhesive-backed light strips that can be cut to size and used to create ambient lighting in any space. Perfect for under-cabinet lighting, accent walls, or around mirrors, they provide vibrant, customizable illumination.",
+  FootLight:
+    "Foot lights are small, low-profile lights designed to be placed at ground level, providing subtle lighting along staircases, hallways, or pathways. These lights enhance safety while adding a touch of elegance to both indoor and outdoor spaces.",
+  TrackLight:
+    "Track lights are mounted on a long rail, offering adjustable light heads that can be directed to specific areas. Perfect for art galleries, kitchens, and retail spaces, they provide versatile, focused lighting with a sleek, modern look.",
+  NicheLight:
+    "Niche lights are designed to illuminate recessed spaces or niches, often used to highlight architectural features, artwork, or decorative objects. They add a dramatic effect and provide soft, focused light to create a cozy, intimate atmosphere.",
+  StrickerLight:
+    "Stricker lights are typically used for accentuating wall features or architectural elements with a narrow beam of light. Their compact design makes them ideal for creating distinctive lighting effects in both residential and commercial spaces.",
+  BurialLight:
+    "Burial lights are outdoor fixtures designed to be installed into the ground, providing ground-level illumination. Ideal for highlighting pathways, gardens, or driveways, these lights are durable, weather-resistant, and create a striking visual effect.",
+  SpikeLight:
+    "Spike lights are outdoor lights that are easily installed into the ground using a spike, offering directional lighting for gardens, trees, or outdoor landscapes. Their rugged design and adjustable heads make them perfect for highlighting outdoor features.",
+  RadiantCollection:
+    "The Radiant Collection features a range of premium lighting fixtures designed to elevate any interior. With modern aesthetics and innovative technology, this collection offers stylish, energy-efficient solutions to create an ambient and inviting atmosphere in your home or office.",
+  MirrorLight:
+    "Mirror lights are designed to illuminate mirrors with soft, even lighting, perfect for bathrooms, dressing rooms, or vanity areas. These lights help eliminate shadows, providing optimal lighting for grooming, makeup application, and creating a stylish, functional space.",
+  SmartLight:
+    "Smart lights are Wi-Fi or Bluetooth-enabled lighting fixtures that can be controlled remotely via smartphone apps, voice assistants, or automation systems. With features like adjustable brightness, color temperature, and scheduling, they offer convenience and flexibility, enhancing both the ambiance and energy efficiency of your home or office.",
 };

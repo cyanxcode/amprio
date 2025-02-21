@@ -19,13 +19,9 @@ export default function HeroX({ category }: Props) {
         <div className="relative z-10">
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
             <div className="max-w-2xl text-center mx-auto">
-              <p className="inline-block text-sm font-medium bg-clip-text text-[#023235]">
-                Welcome to Amprio
-              </p>
-
               <div className="mt-5 max-w-2xl">
                 <h2 className="text-4xl font-italiana sm:text-6xl cursor-default text-[#023235]">
-                  {category.replace("%20", " ")}
+                  {category}
                 </h2>
               </div>
 
@@ -33,7 +29,7 @@ export default function HeroX({ category }: Props) {
                 <p className="text-md md:text-lg text-gray-600">
                   {
                     description[
-                      category.replace(" ", "") as keyof typeof description
+                      category.replaceAll(" ", "") as keyof typeof description
                     ]
                   }
                 </p>

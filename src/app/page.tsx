@@ -35,7 +35,10 @@ export default async function Main() {
         </div>
         <DisplayByTag tag={"New Arrival"} />
       </div>
-      <Quote index={1} />
+      <img
+        src="./images/Banner-LD.png"
+        className="w-full my-20 h-full min-h-96 object-cover"
+      />
       <div className=" my-10">
         <h2 className="w-full text-center text-4xl md:text-6xl font-italiana text-[#023235]">
           Reviews
