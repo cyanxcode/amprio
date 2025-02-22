@@ -7,7 +7,7 @@ export default function Loading() {
           <div className="mt-6 lg:mt-10">
             <p className="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium text-gray-800">
               <svg
-                className="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-600 sm:h-24 sm:w-24"
+                className="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-500 sm:h-24 sm:w-24"
                 width="16"
                 height="13"
                 viewBox="0 0 16 13"
@@ -24,7 +24,7 @@ export default function Loading() {
                 {quotes[Math.floor(Math.random() * 14) + 1]}
               </span>
               <svg
-                className="absolute top-20 right-0 transform -translate-x-8 rotate-180 -translate-y-8 size-16 text-gray-800 sm:h-24 sm:w-24"
+                className="absolute top-20 right-0 transform -translate-x-8 rotate-180 -translate-y-8 size-16 text-gray-500 sm:h-24 sm:w-24"
                 width="16"
                 height="13"
                 viewBox="0 0 16 13"
