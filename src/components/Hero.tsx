@@ -13,7 +13,7 @@ export default function Hero() {
           className="w-[90vw] lg:w-[65vw] grid place-content-center bg-black rounded-lg overflow-hidden"
         >
           <video
-            src="https://cdn.shopify.com/videos/c/o/v/f7f2d726c19543b08f7139395db45dd8.mp4"
+            src="https://cdn.shopify.com/videos/c/o/v/8a7e116608924d73aa530f92dff4830e.mp4"
             className="w-[100%]"
             autoPlay
             muted
