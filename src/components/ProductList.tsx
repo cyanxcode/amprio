@@ -13,13 +13,19 @@ const ProductList = ({ category }: Props) => {
   const { data, isLoading, isError } = useQuery({
     queryKey: [category],
     queryFn: async () => {
-      const { data } = await getAllProducts(category);
+      const { data } = await getAllProducts(category.replace("Smart ", ""));
       const priorityItem = data.products.edges.filter((product: any) =>
         product.node.tags.includes("+1")
       );
       const normalItem = data.products.edges.filter(
         (product: any) => !product.node.tags.includes("+1")
       );
+      if (category.includes("Smart")) {
+        const smartItem = data.products.edges.filter((product: any) =>
+          product.node.tags.includes("Smart")
+        );
+        return smartItem;
+      }
 
       return [...priorityItem, ...normalItem];
     },
