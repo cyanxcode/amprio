@@ -45,6 +45,15 @@ export default function Variant({ variants }: Props) {
       )
     ),
   ];
+  const Reflector = [
+    ...new Set(
+      variants.flatMap((variant: any) =>
+        variant.node.selectedOptions
+          .filter((option: any) => option.name === "Reflector")
+          .map((option: any) => option.value)
+      )
+    ),
+  ];
   const Body = [
     ...new Set(
       variants.flatMap((variant: any) =>
@@ -113,7 +122,28 @@ export default function Variant({ variants }: Props) {
           </Select>{" "}
         </>
       )}
-
+      {Reflector.length != 0 && (
+        <>
+          <div className="font-medium text-zinc-600 tracking-wider">
+            Reflector Color:
+          </div>
+          <Select
+            onValueChange={(value) => updateVariant(value)}
+            defaultValue={Reflector[0]}
+          >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Select Variant" />
+            </SelectTrigger>
+            <SelectContent>
+              {Reflector.map((x: any) => (
+                <SelectItem key={x} value={x}>
+                  {x}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>{" "}
+        </>
+      )}
       {Wattage.length != 0 && (
         <>
           <div className=" font-medium text-zinc-600 tracking-wider">
