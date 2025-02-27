@@ -1,5 +1,12 @@
+"use client";
 import { quotes } from "@/lib/data";
+import { useEffect, useState } from "react";
 export default function Loading() {
+  const random = Math.floor(Math.random() * 14) + 1;
+  const [quote, setQuote] = useState(quotes[0]);
+  useEffect(() => {
+    setQuote(quotes[random]);
+  }, [random]);
   return (
     <>
       <div className="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-20">
@@ -21,7 +28,7 @@ export default function Loading() {
                 />
               </svg>
               <span className="relative z-10 italic text-gray-800">
-                {quotes[Math.floor(Math.random() * 14) + 1]}
+                {quote}
               </span>
               <svg
                 className="absolute top-20 right-0 transform -translate-x-8 rotate-180 -translate-y-8 size-16 text-gray-500 sm:h-24 sm:w-24"
