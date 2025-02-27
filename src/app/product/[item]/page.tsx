@@ -66,6 +66,28 @@ export default async function ProductDetails({
           ></p>
         </div>
       </div>
+      {product.images.edges.length > 1 && (
+        <>
+          <h1 className="flex w-full  text-3xl md:text-5xl justify-center mt-20 font-italiana">
+            More Images
+          </h1>
+          <div className="grid grid-cols-2 sm:grid-cols-4 sm:gap-1 my-10 mx-2 p-2">
+            {product.images.edges.slice(1).map((img: any) => {
+              return (
+                <>
+                  <img
+                    key={img.node.url}
+                    src={img.node.url}
+                    alt={img.node.altText}
+                    className="w-full aspect-square"
+                  />
+                </>
+              );
+            })}
+          </div>
+        </>
+      )}
+
       <Similar category={product.productType} pageID={product.id} />
     </>
   );

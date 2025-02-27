@@ -48,6 +48,14 @@ export async function getProductByID(id) {
   product(id: "gid://shopify/Product/${id}") {
             id
             title
+            images(first: 10){
+              edges{
+                node {
+                  url
+                  altText
+                }
+              }
+            }
             productType
             descriptionHtml
             variants(first: 10) {
