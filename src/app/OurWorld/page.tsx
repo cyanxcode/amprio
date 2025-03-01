@@ -53,12 +53,12 @@ export default function OurWorld() {
             <div className="space-y-5 md:space-y-8">
               <blockquote className="text-center p-4 sm:px-7">
                 <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
-                  To say that switching to Preline has been life-changing is an
-                  understatement. My business has tripled and I got my life
-                  back.
-                </p>
-                <p className="mt-5 text-gray-800 dark:text-neutral-200">
-                  Mr Aggarwal
+                  Mr. Aggarwal, the visionary founder of Amprio (formerly
+                  Vaishno Electricals), has been a driving force in
+                  revolutionizing the lighting industry. With a keen eye for
+                  innovation and quality, he has successfully redefined the
+                  brand, making it a prominent name in premium lighting
+                  solutions.
                 </p>
               </blockquote>
 

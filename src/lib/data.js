@@ -3,8 +3,9 @@ export const categories = [
     title: "Architectural",
     subCategories: [
       { title: "Limited Edition", href: "/Limited Edition" },
-      { title: "Radiant Collection", href: "/Radiant Collection" },
+      { title: "Amprio LUXE", href: "/Amprio LUXE" },
       { title: "COB Down Light", href: "/COB Down Light" },
+      { title: "Surface COB Down Light", href: "/SurfaceCOB Down Light" },
       { title: "Magnetic Track Light", href: "/Magnetic Track Light" },
       { title: "Track Light", href: "/Track Light" },
       { title: "Panel Light", href: "/Panel Light" },
@@ -14,6 +15,7 @@ export const categories = [
       { title: "LED Strip Light", href: "/LED Strip Light" },
       { title: "Foot Light", href: "/Foot Light" },
       { title: "Niche Light", href: "/Niche Light" },
+      { title: "Sensors", href: "/Sensors" },
       { title: "Outdoor Light", href: "/Outdoor Light" },
     ],
   },

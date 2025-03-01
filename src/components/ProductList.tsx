@@ -56,6 +56,16 @@ const ProductList = ({ category }: Props) => {
       </>
     );
   }
+  if (data.length === 0) {
+    return (
+      <div className="w-full flex flex-col items-center justify-center mt-20">
+        <p className="text-xl ">No products found!</p>
+        <p className="text-3xl font-semibold font-italiana">
+          Something amazing is on its way - stay tuned!
+        </p>
+      </div>
+    );
+  }
   return (
     <>
       <div className="grid grid-cols-2 lg:grid-cols-4 sm:gap-1 my-10 mx-2 ">

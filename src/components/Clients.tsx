@@ -2,10 +2,12 @@ export default function Client() {
   return (
     <>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6 md:mb-12">
-          <h2 className="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-neutral-200">
-            Introducing advanced technologies to the Indian market with agility
-            and foresight.
+        <h2 className="text-2xl font-semibold font-italiana md:text-5xl text-gray-800 text-center">
+          Introducing advanced technologies to the Indian market.
+        </h2>
+        <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6 md:mb-12 mt-10">
+          <h2 className="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 ">
+            We integrate premium components to enhance our products performance.
           </h2>
         </div>
 
