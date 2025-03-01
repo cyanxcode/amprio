@@ -1,3 +1,5 @@
+import Insta from "@/components/Insta";
+
 export default function OurWorld() {
   return (
     <>
@@ -43,6 +45,36 @@ export default function OurWorld() {
         </div>
 
         <img src="./images/Excellence.png" className="w-full hidden md:block" />
+
+        {/*History */}
+
+        <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+          <div className="max-w-2xl">
+            <div className="space-y-5 md:space-y-8">
+              <blockquote className="text-center p-4 sm:px-7">
+                <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
+                  To say that switching to Preline has been life-changing is an
+                  understatement. My business has tripled and I got my life
+                  back.
+                </p>
+                <p className="mt-5 text-gray-800 dark:text-neutral-200">
+                  Mr Aggarwal
+                </p>
+              </blockquote>
+
+              <figure>
+                <img
+                  className="w-full object-cover rounded-xl"
+                  src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                  alt="Blog Image"
+                />
+                <figcaption className="mt-3 text-sm text-center text-gray-500 ">
+                  Founder of Amprio / Vaishno Electicals
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
         {/* About */}
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
@@ -69,6 +101,10 @@ export default function OurWorld() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="w-full">
+          <Insta />
         </div>
 
         {/*Icons */}
