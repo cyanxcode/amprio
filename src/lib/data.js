@@ -5,7 +5,7 @@ export const categories = [
       { title: "Limited Edition", href: "/Limited Edition" },
       { title: "Amprio LUXE", href: "/Amprio LUXE" },
       { title: "COB Down Light", href: "/COB Down Light" },
-      { title: "Surface COB Down Light", href: "/SurfaceCOB Down Light" },
+      { title: "Surface COB Down Light", href: "/Surface COB Down Light" },
       { title: "Magnetic Track Light", href: "/Magnetic Track Light" },
       { title: "Track Light", href: "/Track Light" },
       { title: "Panel Light", href: "/Panel Light" },
@@ -126,10 +126,12 @@ export const faqs = [
 export const description = {
   LimitedEdition:
     "Discover our Limited Edition lights, offering exclusive designs and advanced technology that can't be found anywhere else. These unique lighting solutions are perfect for those who want something special and are only available for a limited time – act fast before they’re gone!",
-  RadiantCollection:
-    "The Radiant Collection is a diverse range of lights that can transform any space. From sleek, modern designs to versatile, high-performance solutions, this collection promises to elevate your home or office with dazzling illumination and a variety of styles to choose from.",
+  AmprioLUXE:
+    "The Amprio LUXE is a diverse range of lights that can transform any space. From sleek, modern designs to versatile, high-performance solutions, this collection promises to elevate your home or office with dazzling illumination and a variety of styles to choose from.",
   COBDownLight:
     "COB (Chip-on-Board) lights are a type of LED lighting that provides a high level of brightness with energy efficiency. They consist of multiple LED chips mounted directly onto a single board, creating a uniform light source. This design results in a compact and powerful light, ideal for various applications, including commercial, residential, and automotive lighting. COB lights are known for their longevity and ability to produce consistent, high-quality light without the need for bulky fixtures.",
+  SurfaceCOBDownLight:
+    "Surface COB lights are a type of LED lighting that provides a high level of brightness with energy efficiency. They consist of multiple LED chips mounted directly onto a single board, creating a uniform light source. This design results in a compact and powerful light, ideal for various applications, including commercial, residential, and automotive lighting. COB lights are known for their longevity and ability to produce consistent, high-quality light without the need for bulky fixtures.",
   MagneticTrackLight:
     "The Magnetic Track Light offers unmatched flexibility with a magnetic track system that lets you easily move and adjust light placement. Whether you're illuminating artwork, highlighting architectural features, or creating a dynamic lighting setup, this is your go-to solution for customizable and stylish lighting.",
   TrackLight:

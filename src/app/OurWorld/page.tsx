@@ -75,6 +75,11 @@ export default function OurWorld() {
             </div>
           </div>
         </div>
+
+        <img
+          src="./images/Philosophy.png"
+          className="w-full my-10 h-full min-h-64 object-cover"
+        />
         {/* About */}
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
