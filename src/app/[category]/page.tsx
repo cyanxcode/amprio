@@ -22,7 +22,7 @@ export default async function Category({ params }: any) {
       {category.replaceAll("%20", " ").includes("Smart") && (
         <div className="flex flex-col md:flex-row gap-10 justify-center w-full  items-center">
           <img
-            src="./images/smart.png"
+            src="./images/Smart.png"
             className="w-[94%] lg:w-[50%] rounded-md md:rounded-lg"
           ></img>
           <div className="bg-[#023235] w-[90vw] lg:w-[31vw] h-[26.5vw] rounded-lg hidden lg:grid place-content-center">
