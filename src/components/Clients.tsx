@@ -5,7 +5,7 @@ export default function Client() {
         <h2 className="text-2xl font-semibold font-italiana md:text-5xl text-gray-800 text-center">
           Introducing advanced technologies to the Indian market.
         </h2>
-        <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6 md:mb-12 mt-10">
+        <div className="md:w-1/2 mx-auto text-center mb-6 md:mb-12 mt-10">
           <h2 className="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 ">
             We integrate premium components to enhance our products performance.
           </h2>

@@ -1,5 +1,8 @@
+import Feed from "@/components/Feed";
 import Insta from "@/components/Insta";
-
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 export default function OurWorld() {
   return (
     <>
@@ -30,10 +33,10 @@ export default function OurWorld() {
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
               <div className="text-center font-prata">
-                <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-neutral-200">
+                <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 ">
                   Best lighting solutions
                 </p>
-                <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200">
+                <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight ">
                   When the light just hit right{" "}
                   <span className="text-[#016f63]">
                     you know it&apos;s Amprio
@@ -48,8 +51,8 @@ export default function OurWorld() {
 
         {/*History */}
 
-        <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
-          <div className="max-w-2xl">
+        <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+          <div className="">
             <div className="space-y-5 md:space-y-8">
               <blockquote className="text-center p-4 sm:px-7">
                 <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
@@ -62,24 +65,163 @@ export default function OurWorld() {
                 </p>
               </blockquote>
 
-              <figure>
-                <img
-                  className="w-full object-cover rounded-xl"
-                  src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                  alt="Blog Image"
-                />
-                <figcaption className="mt-3 text-sm text-center text-gray-500 ">
-                  Founder of Amprio / Vaishno Electicals
-                </figcaption>
+              <figure className="w-full flex justify-center">
+                <div className="">
+                  <img
+                    className="max-w-1/2 object-cover rounded-xl"
+                    src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                    alt="Blog Image"
+                  />
+                  <figcaption className="mt-3 text-sm text-center text-gray-500 ">
+                    Founder of Amprio / Vaishno Electicals
+                  </figcaption>
+                </div>
               </figure>
             </div>
           </div>
         </div>
 
+        {/*Leadership */}
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+          <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+            <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
+              Our leadership
+            </h2>
+            <p className="mt-1 text-gray-600 ">Creative people</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
+              <div className="flex items-center gap-x-4">
+                <img
+                  className="rounded-full size-20"
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                  alt="Avatar"
+                />
+                <div className="grow">
+                  <h3 className="font-medium text-gray-800 ">David Forren</h3>
+                  <p className="text-xs uppercase text-gray-500 ">
+                    Founder / CEO
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-3 text-gray-500 ">
+                I am an ambitious workaholic, but apart from that, pretty simple
+                person.
+              </p>
+
+              <div className="mt-3 space-x-1">
+                <Link
+                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
+                  href="#"
+                >
+                  <FaInstagram />
+                </Link>
+                <Link
+                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
+                  href="#"
+                >
+                  <FaLinkedinIn />
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
+              <div className="flex items-center gap-x-4">
+                <img
+                  className="rounded-full size-20"
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                  alt="Avatar"
+                />
+
+                <div className="grow">
+                  <h3 className="font-medium text-gray-800 ">Amil Evara</h3>
+                  <p className="text-xs uppercase text-gray-500 ">Co Founder</p>
+                </div>
+              </div>
+
+              <p className="mt-3 text-gray-500 ">
+                I am an ambitious workaholic, but apart from that, pretty simple
+                person.
+              </p>
+
+              <div className="mt-3 space-x-1">
+                <Link
+                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
+                  href="#"
+                >
+                  <FaInstagram />
+                </Link>
+                <Link
+                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
+                  href="#"
+                >
+                  <FaLinkedinIn />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
         <img
           src="./images/Philosophy.png"
           className="w-full my-10 h-full min-h-64 object-cover"
         />
+        <div className="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+          <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+            <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
+              Our team
+            </h2>
+            <p className="mt-1 text-gray-600 ">Creative people</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-12">
+            <div className="text-center">
+              <img
+                className="rounded-full size-24 mx-auto"
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                alt="Avatar"
+              />
+              <div className="mt-2 sm:mt-4">
+                <h3 className="font-medium text-gray-800 ">David Forren</h3>
+                <p className="text-sm text-gray-600 ">Founder / CEO</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <img
+                className="rounded-full size-24 mx-auto"
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                alt="Avatar"
+              />
+              <div className="mt-2 sm:mt-4">
+                <h3 className="font-medium text-gray-800 ">David Forren</h3>
+                <p className="text-sm text-gray-600 ">Founder / CEO</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <img
+                className="rounded-full size-24 mx-auto"
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                alt="Avatar"
+              />
+              <div className="mt-2 sm:mt-4">
+                <h3 className="font-medium text-gray-800 ">David Forren</h3>
+                <p className="text-sm text-gray-600 ">Founder / CEO</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <img
+                className="rounded-full size-24 mx-auto"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                alt="Avatar"
+              />
+              <div className="mt-2 sm:mt-4">
+                <h3 className="font-medium text-gray-800 ">Amil Evara</h3>
+                <p className="text-sm text-gray-600 ">UI/UX Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* About */}
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
@@ -109,16 +251,16 @@ export default function OurWorld() {
         </div>
 
         <div className="w-full">
-          <Insta />
+          <Feed />
         </div>
 
         {/*Icons */}
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-12">
             <div>
-              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
+              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl ">
                 <svg
-                  className="shrink-0 size-6 text-blue-600 dark:text-blue-500"
+                  className="shrink-0 size-6 text-blue-600 "
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -135,19 +277,19 @@ export default function OurWorld() {
                 </svg>
               </div>
               <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-800 ">
                   Smart Lights
                 </h3>
-                <p className="mt-1 text-gray-600 dark:text-neutral-400">
+                <p className="mt-1 text-gray-600 ">
                   Control your lights effortlessly with advanced technology.
                 </p>
               </div>
             </div>
 
             <div>
-              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
+              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl ">
                 <svg
-                  className="shrink-0 size-6 text-blue-600 dark:text-blue-500"
+                  className="shrink-0 size-6 text-blue-600 "
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -165,19 +307,20 @@ export default function OurWorld() {
                 </svg>
               </div>
               <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-800 ">
                   Energy Efficient
                 </h3>
-                <p className="mt-1 text-gray-600 dark:text-neutral-400">
+
+                <p className="mt-1 text-gray-600 ">
                   Save power without compromising on style or performance.
                 </p>
               </div>
             </div>
 
             <div>
-              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl dark:bg-neutral-900">
+              <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl ">
                 <svg
-                  className="shrink-0 size-6 text-blue-600 dark:text-blue-500"
+                  className="shrink-0 size-6 text-blue-600 "
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -193,10 +336,10 @@ export default function OurWorld() {
                 </svg>
               </div>
               <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-800 ">
                   24/7 Support
                 </h3>
-                <p className="mt-1 text-gray-600 dark:text-neutral-400">
+                <p className="mt-1 text-gray-600 ">
                   Contact us 24 hours a day, 7 days a week.
                 </p>
               </div>

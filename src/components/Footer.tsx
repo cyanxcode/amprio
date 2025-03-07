@@ -17,7 +17,7 @@ export default function Footer() {
               href="#"
               aria-label="Brand"
             >
-              <img src="/AmprioMainNoBg.png" alt="" className="w-52" />
+              <img src="/AmprioMainNoBg.png" alt="" className="w-96 -ml-10" />
             </Link>
             <p className="mt-1 cursor-default text-xs sm:text-sm text-neutral-200 hover:text-neutral-100 focus:text-neutral-100">
               +91 9350471371
