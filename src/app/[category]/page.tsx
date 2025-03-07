@@ -27,7 +27,7 @@ export default async function Category({ params }: any) {
           ></img>
           <div className="bg-[#023235] w-[90vw] lg:w-[31vw] h-[26.5vw] rounded-lg hidden lg:grid place-content-center">
             <img
-              src="/AmprioNoBg.png"
+              src="./AmprioNoBg.png"
               alt=""
               width="100%"
               height="100%"
