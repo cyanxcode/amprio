@@ -12,7 +12,7 @@ export const shopifyAPI = axios.create({
 //get products list by category
 export async function getAllProducts(category) {
   const query = `{
-          products(query: "product_type:${category} ", first:20) {
+          products(query: "product_type:${category} ", first:250) {
             edges{
               node {
                 id
