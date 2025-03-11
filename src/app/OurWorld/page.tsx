@@ -1,7 +1,4 @@
 import Feed from "@/components/Feed";
-import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa6";
 export default function OurWorld() {
   return (
     <>
