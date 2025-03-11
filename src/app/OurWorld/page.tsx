@@ -50,121 +50,82 @@ export default function OurWorld() {
 
         {/*History */}
 
+        <h2 className="w-full text-center text-4xl md:text-6xl font-italiana text-[#023235]">
+          Leadership
+        </h2>
         <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
           <div className="">
-            <div className="space-y-5 md:space-y-8">
-              <blockquote className="text-center p-4 sm:px-7">
+            <div className="grid md:grid-cols-3 items-center">
+              <blockquote className="text-center p-4 sm:px-7 col-span-2">
                 <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
                   Mr. Aggarwal, the visionary founder of Amprio (formerly
                   Vaishno Electricals), has been a driving force in
                   revolutionizing the lighting industry. With a keen eye for
                   innovation and quality, he has successfully redefined the
                   brand, making it a prominent name in premium lighting
-                  solutions.
+                  solutions. He started his journey at the young age of 17,
+                  inspired by his father’s dedication and vision. Despite the
+                  odds, he pursued his education in commerce while
+                  simultaneously working to build his dream. With a burning
+                  passion for the electrical industry, he established Vaishno
+                  Electricals in Sikanderpur Market, Gurugram, recognizing the
+                  immense potential of the rapidly growing city. Over time,
+                  Gurugram embraced his vision, making Vaishno Electricals a
+                  household name.
                 </p>
               </blockquote>
 
-              <figure className="w-full flex justify-center">
-                <div className="">
-                  <img
-                    className="max-w-1/2 object-cover rounded-xl"
-                    src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                    alt="Blog Image"
-                  />
-                  <figcaption className="mt-3 text-sm text-center text-gray-500 ">
-                    Founder of Amprio / Vaishno Electicals
-                  </figcaption>
-                </div>
+              <figure className="w-full flex justify-center items-center flex-col gap-4 col-span-2 md:col-span-1">
+                <img
+                  className="w-[80%] object-cover rounded-xl"
+                  src="./Aggarwal.jpg"
+                  alt="Blog Image"
+                />
+                <figcaption className="mt-3 text-sm text-center text-gray-500 ">
+                  MD, Chairman & Founder of Amprio / Vaishno Electicals
+                </figcaption>
               </figure>
             </div>
           </div>
         </div>
-
-        {/*Leadership */}
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-            <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
-              Our leadership
-            </h2>
-            <p className="mt-1 text-gray-600 ">Creative people</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
-              <div className="flex items-center gap-x-4">
+        <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+          <div className="">
+            <div className="grid md:grid-cols-3 items-center">
+              <figure className="w-full flex justify-center items-center flex-col gap-4  col-span-2 md:col-span-1">
                 <img
-                  className="rounded-full size-20"
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                  alt="Avatar"
+                  className="w-[80% ] object-cover rounded-xl"
+                  src="./Rudrakshi.jpg"
+                  alt="Blog Image"
                 />
-                <div className="grow">
-                  <h3 className="font-medium text-gray-800 ">David Forren</h3>
-                  <p className="text-xs uppercase text-gray-500 ">
-                    Founder / CEO
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-3 text-gray-500 ">
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-
-              <div className="mt-3 space-x-1">
-                <Link
-                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
-                  href="#"
-                >
-                  <FaInstagram />
-                </Link>
-                <Link
-                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
-                  href="#"
-                >
-                  <FaLinkedinIn />
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
-              <div className="flex items-center gap-x-4">
-                <img
-                  className="rounded-full size-20"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                  alt="Avatar"
-                />
-
-                <div className="grow">
-                  <h3 className="font-medium text-gray-800 ">Amil Evara</h3>
-                  <p className="text-xs uppercase text-gray-500 ">Co Founder</p>
-                </div>
-              </div>
-
-              <p className="mt-3 text-gray-500 ">
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-
-              <div className="mt-3 space-x-1">
-                <Link
-                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
-                  href="#"
-                >
-                  <FaInstagram />
-                </Link>
-                <Link
-                  className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
-                  href="#"
-                >
-                  <FaLinkedinIn />
-                </Link>
-              </div>
+                <figcaption className="mt-3 text-sm text-center text-gray-500 ">
+                  Co-founder of Amprio | Principal Lighting Designer &
+                  Consultant
+                </figcaption>
+              </figure>
+              <blockquote className="text-center p-4 sm:px-7 col-span-2">
+                <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
+                  Rudrakshi Aggarwal’s journey began in event management, where
+                  she worked with brands like Samsung, Google, and Nikon,
+                  sharpening her expertise in communication and brand strategy.
+                  Rudrakshi is a self-taught lighting consultant dedicated to
+                  creating impactful, well-designed spaces. Over the past five
+                  years, she has continuously pushed boundaries, learned, and
+                  grown. Leaving behind stability to chase a dream, she built
+                  Amprio—a brand that stands as a testament to perseverance,
+                  innovation, and the transformative power of lighting. Her
+                  journey proves that passion and persistence can illuminate the
+                  path to success.
+                </p>
+              </blockquote>
             </div>
           </div>
         </div>
+
         <img
           src="./images/Philosophy.png"
           className="w-full my-10 h-full min-h-64 object-cover"
         />
+        {/*
         <div className="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
             <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
@@ -221,6 +182,7 @@ export default function OurWorld() {
             </div>
           </div>
         </div>
+        */}
         {/* About */}
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
           <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
