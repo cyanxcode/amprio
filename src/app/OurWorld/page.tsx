@@ -151,8 +151,8 @@ export default function OurWorld() {
                     for innovation and quality, he has successfully redefined
                     the brand, making it a prominent name in premium lighting
                     solutions. He started his journey at the young age of 17,
-                    inspired by his father’s dedication and vision. Despite the
-                    odds, he pursued his education in commerce while
+                    inspired by his father&apos;s dedication and vision. Despite
+                    the odds, he pursued his education in commerce while
                     simultaneously working to build his dream. With a burning
                     passion for the electrical industry, he established Vaishno
                     Electricals in Sikanderpur Market, Gurugram, recognizing the
@@ -201,7 +201,7 @@ export default function OurWorld() {
                 <blockquote className="text-center p-4 sm:px-7 col-span-2">
                   <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
                     <span className="text-2xl font-semibold md:text-3xl text-[#023235]">
-                      Rudrakshi Aggarwal's
+                      Rudrakshi Aggarwal&apos;s
                     </span>{" "}
                     journey began in event management, where she worked with
                     brands like Samsung, Google, and Nikon, sharpening her
@@ -297,11 +297,11 @@ export default function OurWorld() {
                 </h1>
                 <p className="mt-3 text-lg text-gray-800 ">
                   Lighting is more than just illumination—it is an art that
-                  defines a space. In today’s fast-paced world, the lighting
-                  industry is evolving rapidly, yet its true potential remains
-                  underrated. While theoretical knowledge is abundant, practical
-                  implementation is where we truly make a difference. Our
-                  mission is to create awareness about the significance of
+                  defines a space. In today&apos;s fast-paced world, the
+                  lighting industry is evolving rapidly, yet its true potential
+                  remains underrated. While theoretical knowledge is abundant,
+                  practical implementation is where we truly make a difference.
+                  Our mission is to create awareness about the significance of
                   lighting, breaking down its complexities into simpler,
                   actionable insights. There are no one-size-fits-all
                   solutions—lighting should be tailored to individual needs,
