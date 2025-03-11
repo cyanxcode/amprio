@@ -10,7 +10,7 @@ export default async function Main() {
     <>
       <Hero />
       <img
-        src="./Lightting.png"
+        src="./lightting.png"
         className="w-full my-20 h-full min-h-64 object-cover"
       />
 
