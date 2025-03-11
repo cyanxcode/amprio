@@ -8,10 +8,15 @@ export default function OurWorld() {
           <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">
             <img src="/AmprioWhite.png" alt="" />
             <p className="mt-18 md:mt-2 text-lg text-gray-800">
-              Amprio is transforming the way you light up your world. Our
-              innovative solutions bring both style and functionality to your
-              spaces. Brighten your home, office, or outdoor areas with Amprio,
-              and experience a whole new level of warmth and brilliance.
+              Amprio is not just a brand; it is a tribute to family, heritage,
+              and dedication. The name itself is a fusion of AMIT and PREETI—a
+              heartfelt acknowledgment of the unwavering support and hard work
+              of the pillars behind this journey. With Amprio, we take a step
+              further into the luxury lighting segment, introducing exclusive,
+              handcrafted, and custom-made lighting solutions. Drawing
+              inspiration from global designs while staying true to our Indian
+              roots, Amprio seamlessly blends sophistication with architectural
+              excellence.
             </p>
           </div>
           <div className="w-[90vw] lg:w-[65vw] grid place-content-center  bg-black rounded-3xl aspect-video overflow-hidden mb-5">
@@ -46,36 +51,98 @@ export default function OurWorld() {
         <img src="./images/Excellence.png" className="w-full hidden md:block" />
 
         {/*History */}
-
-        <h2 className="w-full text-center text-4xl md:text-6xl font-italiana text-[#023235]">
-          Leadership
-        </h2>
         <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
           <div className="">
             <div className="grid md:grid-cols-3 items-center">
               <blockquote className="text-center p-4 sm:px-7 col-span-2">
-                <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
-                  Mr. Aggarwal, the visionary founder of Amprio (formerly
-                  Vaishno Electricals), has been a driving force in
-                  revolutionizing the lighting industry. With a keen eye for
-                  innovation and quality, he has successfully redefined the
-                  brand, making it a prominent name in premium lighting
-                  solutions. He started his journey at the young age of 17,
-                  inspired by his father’s dedication and vision. Despite the
-                  odds, he pursued his education in commerce while
-                  simultaneously working to build his dream. With a burning
-                  passion for the electrical industry, he established Vaishno
-                  Electricals in Sikanderpur Market, Gurugram, recognizing the
-                  immense potential of the rapidly growing city. Over time,
-                  Gurugram embraced his vision, making Vaishno Electricals a
-                  household name.
+                <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
+                  Vaishno Electricals & Lights has been a trusted name in the
+                  industry for decades, serving as a retail and wholesale
+                  destination for complete electrical and lighting solutions.
+                  Our vision is to become the one-stop solution for our
+                  customers, integrating not just electricals and lighting but
+                  also automation and home décor solutions such as wallpapers.
+                  Expanding into the digital era, we are now bridging the gap
+                  with our e-commerce platform, ensuring that quality lighting
+                  and electrical solutions are accessible to all.
                 </p>
               </blockquote>
 
               <figure className="w-full flex justify-center items-center flex-col gap-4 col-span-2 md:col-span-1">
                 <img
                   className="w-[80%] object-cover rounded-xl"
-                  src="./Aggarwal.jpg"
+                  src="./Vaishno-Logo.png"
+                  alt="Blog Image"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+          <div className="">
+            <div className="grid md:grid-cols-3 items-center">
+              <figure className="w-full flex justify-center items-center flex-col gap-4  col-span-2 md:col-span-1">
+                <img
+                  className="w-[80% ] object-cover rounded-xl"
+                  src="./Vaishno-Lights-2.png"
+                  alt="Blog Image"
+                />
+              </figure>
+              <blockquote className="text-center p-4 sm:px-7 col-span-2">
+                <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
+                  Vaishno Lights – Illuminating Homes Across India Vaishno
+                  Lights emerged as an affordable lighting brand, focusing on
+                  architectural and decorative lighting. The brand fills a
+                  crucial gap in the industry by educating consumers about the
+                  significance of selecting the right lighting—not just to
+                  enhance aesthetics but also to promote health and well-being.{" "}
+                  <br />
+                  Our products are designed to be:
+                  <p className="list-none flex gap-2 flex-wrap">
+                    <li>✔ Less harmful</li>
+                    <li>✔ Easy to use</li>
+                    <li>✔ Less harmful</li>
+                    <li>✔ Environmentally friendly</li>
+                    <li>✔ Long-lasting</li>
+                  </p>
+                  , Vaishno Lights has expanded from Gurugram to a PAN-India
+                  presence, brightening over 40,000 homes. Moving forward, we
+                  continue our commitment to offering lighting consultations and
+                  bespoke lighting plans tailored to individual needs.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+          <div className="">
+            <div className="grid md:grid-cols-3 items-center">
+              <blockquote className="text-center p-4 sm:px-7 col-span-2">
+                <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
+                  Mr. Aggarwal, the visionary founder of Amprio, has been a
+                  driving force in revolutionizing the lighting industry. With a
+                  keen eye for innovation and quality, he has successfully
+                  redefined the brand, making it a prominent name in premium
+                  lighting solutions. He started his journey at the young age of
+                  17, inspired by his father’s dedication and vision. Despite
+                  the odds, he pursued his education in commerce while
+                  simultaneously working to build his dream. With a burning
+                  passion for the electrical industry, he established Vaishno
+                  Electricals in Sikanderpur Market, Gurugram, recognizing the
+                  immense potential of the rapidly growing city. Over time,
+                  Gurugram embraced his vision, making Vaishno Electricals a
+                  household name.With 37 years of experience in the electrical
+                  industry, Mr. Agarwal has continued to push boundaries. Driven
+                  by the ever-evolving demands of modern lighting, he expanded
+                  into the lighting sector alongside his daughter, Rudrakshi,
+                  laying the foundation for Vaishno Lights.
+                </p>
+              </blockquote>
+
+              <figure className="w-full flex justify-center items-center flex-col gap-4 col-span-2 md:col-span-1">
+                <img
+                  className="w-[80%] object-cover rounded-xl"
+                  src="./Aggarwal2.jpg"
                   alt="Blog Image"
                 />
                 <figcaption className="mt-3 text-sm text-center text-gray-500 ">
@@ -91,7 +158,7 @@ export default function OurWorld() {
               <figure className="w-full flex justify-center items-center flex-col gap-4  col-span-2 md:col-span-1">
                 <img
                   className="w-[80% ] object-cover rounded-xl"
-                  src="./Rudrakshi.jpg"
+                  src="./Rudrakshi2.jpg"
                   alt="Blog Image"
                 />
                 <figcaption className="mt-3 text-sm text-center text-gray-500 ">
@@ -100,18 +167,24 @@ export default function OurWorld() {
                 </figcaption>
               </figure>
               <blockquote className="text-center p-4 sm:px-7 col-span-2">
-                <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
+                <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
                   Rudrakshi Aggarwal’s journey began in event management, where
                   she worked with brands like Samsung, Google, and Nikon,
-                  sharpening her expertise in communication and brand strategy.
-                  Rudrakshi is a self-taught lighting consultant dedicated to
-                  creating impactful, well-designed spaces. Over the past five
-                  years, she has continuously pushed boundaries, learned, and
-                  grown. Leaving behind stability to chase a dream, she built
-                  Amprio—a brand that stands as a testament to perseverance,
-                  innovation, and the transformative power of lighting. Her
-                  journey proves that passion and persistence can illuminate the
-                  path to success.
+                  sharpening her expertise in communication and brand strategy,
+                  She later transitioned into advertising, collaborating with
+                  clients such as Jubilant Pharma, Vivo, Haldirams and Costa,
+                  gaining a deep understanding of marketing and media. Her
+                  entrepreneurial spirit led her to embrace Vaishno Lights,
+                  where she immersed herself in sales, operations, and retail
+                  management, unlocking new growth opportunities, including
+                  digital expansion. Rudrakshi is a self-taught lighting
+                  consultant dedicated to creating impactful, well-designed
+                  spaces. Over the past five years, she has continuously pushed
+                  boundaries, learned, and grown. Leaving behind stability to
+                  chase a dream, she built Amprio—a brand that stands as a
+                  testament to perseverance, innovation, and the transformative
+                  power of lighting. Her journey proves that passion and
+                  persistence can illuminate the path to success.
                 </p>
               </blockquote>
             </div>
