@@ -90,6 +90,10 @@ export default function OurWorld() {
               </div>
             </div>
             <div className="px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto mt-12">
+              <img
+                src="./map.png"
+                className="w-full absolute opacity-15 -mt-10 h-full min-h-64 object-cover"
+              />
               <h2 className="w-full text-center text-3xl md:text-5xl font-prata text-[#023235] mb-12">
                 Vaishno Lights – Illuminating Homes Across India
               </h2>
