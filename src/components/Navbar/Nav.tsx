@@ -44,7 +44,7 @@ export default function Nav() {
                   <Link
                     key={y.title}
                     href={y.href}
-                    className="  whitespace-nowrap pr-10 text-neutral-200 hover:text-neutral-100 px-5 py-3 "
+                    className="whitespace-nowrap pr-10 text-neutral-200 hover:text-neutral-100 px-5 py-2 "
                   >
                     {y.title}
                   </Link>

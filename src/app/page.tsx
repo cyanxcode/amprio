@@ -20,8 +20,9 @@ export default async function Main() {
         </h2>
         <DisplayByTag tag={"Best Seller"} />
       </div>
+      <img src="./images/Excellence.png" className="w-full hidden md:block" />
       <div className="overflow-hidden">
-        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-28">
           <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
             <div className="text-center font-prata">
               <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 ">
