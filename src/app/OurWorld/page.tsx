@@ -7,11 +7,13 @@ export default function OurWorld() {
           {/* Hero */}
           <div className="w-full items-center flex px-5 gap-5 flex-col-reverse lg:flex-row-reverse ">
             <div className="w-[90vw] lg:w-[31vw] lg:h-[36.5vw] flex justify-center flex-col px-5 ">
-              <img src="/AmprioWhite.png" alt="" />
-              <p className="mt-18 md:mt-2 text-lg text-gray-800">
-                <h2 className="w-full text-left text-xl md:text-2xl font-prata text-[#023235]">
+              <div className="flex flex-col items-end">
+                <img src="/AmprioWhite.png" alt="" />
+                <h2 className="w-full text-center text-lg md:text-xl font-prata text-[#023235] -mt-8 mb-8">
                   A Tribute to Passion & Heritage
                 </h2>
+              </div>
+              <p className="mt-18 md:mt-2 text-lg text-gray-800">
                 Amprio is not just a brand, it is a tribute to family, heritage,
                 and dedication. The name itself is a fusion of AMIT and PREETI—a
                 heartfelt acknowledgment of the unwavering support and hard work
@@ -32,22 +34,7 @@ export default function OurWorld() {
               ></video>
             </div>
           </div>
-          {/*Details */}
-          <div className="overflow-hidden">
-            <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
-              <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
-                <div className="text-center font-prata">
-                  <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight ">
-                    “They say – Apne mummy-papa ka naam roshan karna –
-                    <span className="font-prata text-[#016f63]">
-                      I took that too seriously, quite literally illuminating
-                      their legacy through lighting.”
-                    </span>
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
+
           {/*History */}
           <div className="px-4 sm:px-6 lg:px-8 mx-auto">
             <h2 className="w-full text-center text-3xl md:text-5xl font-prata text-[#023235]">
@@ -57,7 +44,7 @@ export default function OurWorld() {
               <div className="grid md:grid-cols-3 items-center">
                 <blockquote className="text-center p-4 sm:px-7 col-span-2">
                   <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
-                    <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                    <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                       Vaishno Electricals & Lights
                     </span>{" "}
                     has been a trusted name in the industry for decades, serving
@@ -109,11 +96,11 @@ export default function OurWorld() {
                       lighting—not just to enhance aesthetics but also to
                       promote health and well-being. Vaishno Lights has expanded
                       from Gurugram to a{" "}
-                      <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                      <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                         PAN-India
                       </span>{" "}
                       presence, brightening over{" "}
-                      <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                      <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                         50,000 homes.
                       </span>{" "}
                       Moving forward, we continue our commitment to offering
@@ -133,7 +120,7 @@ export default function OurWorld() {
               <div className="grid md:grid-cols-3 items-center">
                 <blockquote className="text-center p-4 sm:px-7 col-span-2">
                   <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:leading-normal">
-                    <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                    <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                       Mr. Aggarwal
                     </span>
                     , the visionary founder of Amprio, has been a driving force
@@ -150,7 +137,7 @@ export default function OurWorld() {
                     potential of the rapidly growing city. Over time, Gurugram
                     embraced his vision, making Vaishno Electricals a household
                     name.With{" "}
-                    <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                    <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                       40 Years
                     </span>{" "}
                     of experience in the electrical industry, Mr. Aggarwal has
@@ -191,7 +178,7 @@ export default function OurWorld() {
                 </figure>
                 <blockquote className="text-center p-4 sm:px-7 col-span-2">
                   <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
-                    <span className="font-prata text-2xl font-semibold md:text-3xl text-[#023235]">
+                    <span className="text-xl font-semibold md:text-2xl text-[#023235]">
                       Rudrakshi&apos;s
                     </span>{" "}
                     journey began in event management, where she worked with
