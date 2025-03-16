@@ -30,9 +30,7 @@ export default async function Main() {
               </p>
               <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight ">
                 When the light just hit right{" "}
-                <span className="text-[#016f63]">
-                  you know it&apos;s Amprio!
-                </span>
+                <div className="text-[#016f63]">you know it&apos;s Amprio!</div>
               </h1>
             </div>
           </div>
@@ -58,7 +56,7 @@ export default async function Main() {
         </h2>
       </div>
       <Reviews />
-      <FAQs />
+      <FAQs number={5} />
     </>
   );
 }

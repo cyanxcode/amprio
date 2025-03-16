@@ -31,6 +31,7 @@ export default function OurWorld() {
                 autoPlay
                 loop
                 controls
+                muted
               ></video>
             </div>
           </div>
@@ -53,7 +54,8 @@ export default function OurWorld() {
                     the one-stop solution for our customers, integrating not
                     just electricals and lighting but also automation and home
                     décor solutions such as wallpapers. Expanding into the
-                    digital era, we are now bridging the gap with our e-commerce
+                    digital era, we are now bridging the gap with our{" "}
+                    <span className="whitespace-nowrap">e-commerce </span>
                     platform, ensuring that quality lighting and electrical
                     solutions are accessible to all.
                   </p>
@@ -69,12 +71,6 @@ export default function OurWorld() {
               </div>
             </div>
             <div className="w-full">
-              <div className="w-full flex justify-end">
-                <img
-                  src="./map2.png"
-                  className="w-[50%] absolute opacity-15 mt-96 md:-mt-10 h-full object-cover"
-                />
-              </div>
               <h2 className="w-full text-center text-3xl md:text-5xl font-prata text-[#023235] mb-12">
                 Vaishno Lights – Illuminating Homes Across India
               </h2>
@@ -88,24 +84,32 @@ export default function OurWorld() {
                     />
                   </figure>
                   <blockquote className="text-center p-4 sm:px-7 col-span-2">
-                    <p className="text-lg  font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal">
-                      Vaishno Lights emerged as an affordable lighting brand,
-                      focusing on architectural and decorative lighting. The
-                      brand fills a crucial gap in the industry by educating
-                      consumers about the significance of selecting the right
-                      lighting—not just to enhance aesthetics but also to
-                      promote health and well-being. Vaishno Lights has expanded
-                      from Gurugram to a{" "}
-                      <span className="text-xl font-semibold md:text-2xl text-[#023235]">
-                        PAN-India
-                      </span>{" "}
-                      presence, brightening over{" "}
-                      <span className="text-xl font-semibold md:text-2xl text-[#023235]">
-                        50,000 homes.
-                      </span>{" "}
-                      Moving forward, we continue our commitment to offering
-                      lighting consultations and bespoke lighting plans tailored
-                      to individual needs.
+                    <p className="text-lg font-medium text-gray-800 md:text-xl md:leading-normal xl:text-xl xl:leading-normal relative flex items-center justify-center">
+                      <img
+                        src="./map2.png"
+                        className="absolute opacity-15 -top-20 h-[140%] lg:h-[180%] object-cover overflow-hidden"
+                      />
+                      <p>
+                        Vaishno Lights emerged as an affordable lighting brand,
+                        focusing on architectural and decorative lighting. The
+                        brand fills a crucial gap in the industry by educating
+                        consumers about the significance of selecting the right
+                        <span className="whitespace-nowrap">lighting-not </span>
+                        just to enhance aesthetics but also to promote health
+                        and{" "}
+                        <span className="whitespace-nowrap">well-being. </span>
+                        Vaishno Lights has expanded from Gurugram to a{" "}
+                        <span className="text-xl font-semibold md:text-2xl text-[#023235]">
+                          PAN-India
+                        </span>{" "}
+                        presence, brightening over{" "}
+                        <span className="text-xl font-semibold md:text-2xl text-[#023235]">
+                          50,000 homes.
+                        </span>{" "}
+                        Moving forward, we continue our commitment to offering
+                        lighting consultations and bespoke lighting plans
+                        tailored to individual needs.
+                      </p>
                     </p>
                   </blockquote>
                 </div>
@@ -127,7 +131,7 @@ export default function OurWorld() {
                     in revolutionizing the lighting industry. With a keen eye
                     for innovation and quality, he has successfully redefined
                     the brand, making it a prominent name in premium lighting
-                    solutions.A hardworking and ambitious entrepreneur, He
+                    solutions. A hardworking and ambitious entrepreneur, He
                     started his journey at the young age of 17, inspired by his
                     father&apos;s dedication and vision. Despite the odds, he
                     pursued his education in commerce while simultaneously
@@ -136,12 +140,13 @@ export default function OurWorld() {
                     Sikanderpur Market, Gurugram, recognizing the immense
                     potential of the rapidly growing city. Over time, Gurugram
                     embraced his vision, making Vaishno Electricals a household
-                    name.With{" "}
-                    <span className="text-xl font-semibold md:text-2xl text-[#023235]">
+                    name. With{" "}
+                    <span className="text-xl font-semibold md:text-2xl text-[#023235] whitespace-nowrap">
                       40 Years
                     </span>{" "}
                     of experience in the electrical industry, Mr. Aggarwal has
-                    continued to push boundaries. Driven by the ever-evolving
+                    continued to push boundaries. Driven by the{" "}
+                    <span className="whitespace-nowrap">ever-evolving </span>
                     demands of modern lighting, he expanded into the lighting
                     sector alongside his daughter, Rudrakshi, laying the
                     foundation for Vaishno Lights.
@@ -155,8 +160,11 @@ export default function OurWorld() {
                     alt="Blog Image"
                   />
                   <figcaption className="mt-3 text-sm text-center text-gray-500 ">
-                    Mr. Amit Aggarwal – MD, Chairman & Founder of Amprio,
-                    Vaishno Light & Vaishno Electricals
+                    <div className="text-xl font-semibold text-zinc-700">
+                      Mr. Amit Aggarwal
+                    </div>{" "}
+                    MD, Chairman & Founder of Amprio, Vaishno Light & Vaishno
+                    Electricals
                   </figcaption>
                 </figure>
               </div>
@@ -172,8 +180,11 @@ export default function OurWorld() {
                     alt="Blog Image"
                   />
                   <figcaption className="mt-3 text-sm text-center text-gray-500 ">
-                    Rudrakshi Aggarwal – Co-founder of Amprio | Principal
-                    Lighting Designer & Consultant | Lightpreneur
+                    <div className="text-xl font-semibold text-zinc-700">
+                      Rudrakshi Aggarwal
+                    </div>{" "}
+                    Co-founder of Amprio | Principal Lighting Designer &
+                    Consultant | Lightpreneur
                   </figcaption>
                 </figure>
                 <blockquote className="text-center p-4 sm:px-7 col-span-2">
@@ -183,19 +194,21 @@ export default function OurWorld() {
                     </span>{" "}
                     journey began in event management, where she worked with
                     brands like Samsung, Google, and Nikon, sharpening her
-                    expertise in communication and brand strategy, She later
+                    expertise in communication and brand strategy. She later
                     transitioned into advertising, collaborating with global
                     clients, gaining a deep understanding of marketing and media
                     where she immersed herself in sales, operations, and retail
                     management, unlocking new growth opportunities, including
-                    digital expansion.. Her entrepreneurial spirit led her to
-                    embrace Vaishno Lights. Rudrakshi is a self-taught lighting
-                    consultant dedicated to creating impactful, well-designed
+                    digital expansion. Her entrepreneurial spirit led her to
+                    embrace Vaishno Lights. Rudrakshi is a
+                    <span className="whitespace-nowrap">self-taught </span>
+                    lighting consultant dedicated to creating impactful,
+                    <span className="whitespace-nowrap">well-designed </span>
                     spaces. Over the past five years, she has continuously
                     pushed boundaries, learned, and grown. Leaving behind
-                    stability to chase a dream, she built Amprio —a brand that
-                    stands as a testament to perseverance, innovation, and the
-                    transformative power of lighting.
+                    stability to chase a dream, she built <br /> Amprio —a brand
+                    that stands as a testament to perseverance, innovation, and
+                    the transformative power of lighting.
                   </p>
                 </blockquote>
               </div>
@@ -204,22 +217,32 @@ export default function OurWorld() {
           <blockquote className="text-center p-4 sm:px-7 col-span-2 w-full flex justify-center">
             <p className="text-2xl font-semibold text-gray-800 md:text-3xl md:leading-normal xl:text-3xl xl:leading-normal w-[80%]">
               With Amprio, we invite you to discover the beauty of handcrafted,
-              luxurious lighting—made in India, made for India—and let light be
+              luxurious{" "}
+              <span className="whitespace-nowrap">lighting—made </span> in
+              India, made for{" "}
+              <span className="whitespace-nowrap">India—and </span> let light be
               the defining element of your home and workspace.
             </p>
           </blockquote>
           <blockquote className="text-center p-4 sm:px-7 col-span-2 w-full flex justify-center">
             <p className="text-xl font-semibold text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal w-[80%]">
               From a young entrepreneur with a dream to a visionary leader
-              transforming the lighting industry, Mr. Amit Agarwal’s journey is
-              a testament to passion, perseverance, and the relentless pursuit
-              of excellence. With Vaishno Electricals, Vaishno Lights, and
-              thereafter Amprio, he continues to illuminate lives, one light at
-              a time. Now, his genuineness and expert knowledge are appreciated
-              by millions across YouTube, his channel, and Instagram. Alongside
-              him, Rudrakshi Aggarwal brings innovation and modern design
-              sensibilities to the industry, redefining lighting solutions with
-              her expertise and vision.
+              transforming the lighting industry, Mr. Amit Agarwal&apos;s
+              journey is a testament to passion, perseverance, and the
+              relentless pursuit of excellence. With Vaishno Electricals,
+              Vaishno Lights, and thereafter Amprio, he continues to illuminate
+              lives, one light at a time. Now, his{" "}
+              <span className="text-2xl font-extrabold md:text-4xl text-[#023235]">
+                Genuineness
+              </span>{" "}
+              and{" "}
+              <span className="text-2xl font-extrabold md:text-4xl text-[#023235]">
+                Expert knowledge
+              </span>{" "}
+              are appreciated by millions across YouTube, his channel, and
+              Instagram. Alongside him, <br /> Rudrakshi brings innovation and
+              modern design sensibilities to the industry, redefining lighting
+              solutions with her expertise and vision.
             </p>
           </blockquote>
           <img
@@ -286,31 +309,37 @@ export default function OurWorld() {
         */}
           {/* About */}
           <blockquote className="text-center p-4 sm:px-7 col-span-2 w-full flex justify-center">
-            <p className="text-2xl font-semibold text-gray-800 md:text-3xl md:leading-normal xl:text-3xl xl:leading-normal w-[80%]">
-              “Lighting is the first and most essential element of décor—one
-              that enhances all other components of a space.”
+            <p className="text-3xl font-semibold text-gray-800 md:text-4xl md:leading-normal xl:leading-normal w-[90%]">
+              “Lighting is the first and most essential element of décor
+              <br />
+              one that enhances all other components of a space.”
             </p>
           </blockquote>
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
             <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
               <div className="lg:col-span-3">
-                <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl font-prata">
+                <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl font-prata text-nowrap">
                   Illuminate Your World
                 </h1>
+                <br />
                 <p className="mt-3 text-lg text-gray-800 ">
-                  Lighting is more than just illumination—it is an art that
-                  defines a space. In today&apos;s fast-paced world, the
-                  lighting industry is evolving rapidly, yet its true potential
-                  remains underrated. While theoretical knowledge is abundant,
-                  practical implementation is where we truly make a difference.{" "}
-                  <br /> <br />
+                  Lighting is more than just{" "}
+                  <span className="whitespace-nowrap">illumination—it </span>
+                  is an art that defines a space. In today&apos;s{" "}
+                  <span className="whitespace-nowrap">fast-paced </span> world,
+                  the lighting industry is evolving rapidly, yet its true
+                  potential remains underrated. While theoretical knowledge is
+                  abundant, practical implementation is where we truly make a
+                  difference. <br /> <br />
                   Our mission is to create awareness about the significance of
                   lighting, breaking down its complexities into simpler,
-                  actionable insights. There are no one-size-fits-all
-                  solutions—lighting should be tailored to individual needs,
-                  spaces, and functions. Each light source has its unique
-                  properties, throw, and impact, making the selection process
-                  crucial for optimizing comfort and well-being.
+                  actionable insights. There are no{" "}
+                  <span className="whitespace-nowrap">one-size-fits-all </span>
+                  <span className="whitespace-nowrap">solutions—lighting </span>
+                  should be tailored to individual needs, spaces, and functions.
+                  Each light source has its unique properties, throw, and
+                  impact, making the selection process crucial for optimizing
+                  comfort and well-being.
                 </p>
               </div>
               <div className="lg:col-span-4 mt-10 lg:mt-0">
@@ -326,7 +355,7 @@ export default function OurWorld() {
             <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
               <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
                 <div className="text-center font-prata">
-                  <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight ">
+                  <h1 className="text-2xl text-gray-800 font-bold sm:text-3xl lg:text-4xl lg:leading-tight ">
                     “People will forget what you said, people will forget what
                     you did, but people will never forget how you made them
                     feel.”
@@ -340,10 +369,17 @@ export default function OurWorld() {
           </div>
 
           <blockquote className="text-center p-4 sm:px-7 col-span-2 w-full flex justify-center">
-            <p className="text-2xl font-semibold text-gray-800 md:text-3xl md:leading-normal xl:text-3xl xl:leading-normal w-[80%]">
-              Amprio is a bespoke lighting atelier, employing traditional
-              craftsmanship: <br />✔ Glass blowing✔ Hand carving✔ Hand painting✔
-              Intricate detailing <br />
+            <p className="text-xl font-semibold text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal w-[80%]">
+              Amprio is a bespoke lighting atelier,
+              <br /> employing traditional craftsmanship: <br />
+              <div className="flex item justify-center">
+                <div className="">
+                  <div className="text-left">✔ Hand carving</div>
+                  <div className="text-left">✔ Hand painting</div>
+                  <div className="text-left">✔ Intricate detailing</div>
+                  <div className="text-left">✔ Glass blowing</div>
+                </div>
+              </div>
               We believe that a well-designed space requires more than just
               illumination—it demands a statement piece that enhances the décor.
               Our timeless collections blend fragility with elegance, offering
@@ -354,115 +390,6 @@ export default function OurWorld() {
           <div className="w-full">
             <Feed />
           </div>
-          {/*Icons */}
-          <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-12">
-              <div>
-                <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-[#023235] before:via-transparent before:to-[#023235] before:rounded-xl ">
-                  <svg
-                    className="shrink-0 size-6 text-[#023235] "
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect width="10" height="14" x="3" y="8" rx="2" />
-                    <path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4" />
-                    <path d="M8 18h.01" />
-                  </svg>
-                </div>
-                <div className="mt-5">
-                  <h3 className="text-lg font-semibold text-gray-800 ">
-                    Smart Lights
-                  </h3>
-                  <p className="mt-1 text-gray-600 ">
-                    Control your lights effortlessly with advanced technology.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-[#023235] before:via-transparent before:to-text-[#023235] before:rounded-xl ">
-                  <svg
-                    className="shrink-0 size-6 text-[#023235] "
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20 7h-9" />
-                    <path d="M14 17H5" />
-                    <circle cx="17" cy="17" r="3" />
-                    <circle cx="7" cy="7" r="3" />
-                  </svg>
-                </div>
-                <div className="mt-5">
-                  <h3 className="text-lg font-semibold text-gray-800 ">
-                    Energy Efficient
-                  </h3>
-
-                  <p className="mt-1 text-gray-600 ">
-                    Save power without compromising on style or performance.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-[1] before:bg-gradient-to-br before:from-[#023235] before:via-transparent before:to-text-[#023235] before:rounded-xl ">
-                  <svg
-                    className="shrink-0 size-6 text-[#023235] "
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
-                    <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
-                  </svg>
-                </div>
-                <div className="mt-5">
-                  <h3 className="text-lg font-semibold text-gray-800 ">
-                    24/7 Support
-                  </h3>
-                  <p className="mt-1 text-gray-600 ">
-                    Contact us 24 hours a day, 7 days a week.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*}=
-        <div className="w-full bg-gradient-to-br from-[#023235] to-[#016f63] box-border">
-          <div className="gold w-full h-2"></div>
-          <h2 className="w-full flex justify-center items-start mt-10">
-            <img src="/Lightbrary-bg.png" alt="" className="w-60" />
-          </h2>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 py-10 px-20 w-full justify-center ">
-            <div className="h-[30vw] w-full bg-black"></div>
-            <div className="h-[30vw] w-full bg-black"></div>
-            <div className="h-[30vw] w-full bg-black"></div>
-            <div className="h-[30vw] w-full bg-black"></div>
-          </div>
-          <div className="gold w-full h-2"></div>
-        </div>
-        <FAQs />
-        {*/}
         </div>
       </div>
     </>

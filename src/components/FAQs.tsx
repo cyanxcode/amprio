@@ -5,8 +5,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+interface Props {
+  number: number;
+}
 
-export default function FAQs() {
+export default function FAQs({ number }: Props) {
   return (
     <>
       <div className="mt-10 flex w-full flex-col items-center" id="FAQs">
@@ -14,7 +17,7 @@ export default function FAQs() {
           FAQs
         </h2>
         <div className=" w-[80vw] lg:w-[40vw]">
-          {faqs.map((x) => (
+          {faqs.slice(0, number).map((x) => (
             <Accordion type="single" key={x.Question} collapsible>
               <AccordionItem value={x.Question}>
                 <AccordionTrigger>Q. {x.Question}</AccordionTrigger>

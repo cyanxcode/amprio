@@ -79,47 +79,88 @@ export const quotes = [
 
 export const faqs = [
   {
-    Question: "What is Refund or Cancellation Policy?",
-    Answer: "Returns and refund are accepted within 14 days of delivery",
-  },
-  {
-    Question: "How long does it take for delivery?",
-    Answer: "Delivery is done within 14 to 30 days of order.",
-  },
-  {
-    Question: "Do your lights come with a warranty?",
+    Question: "What is Amprio?",
     Answer:
-      "Yes! We offer warranties on most of our products. The standard warranty duration is @ years, depending on the type of light. For more details, please refer to the product description or contact us.",
+      "Amprio is an affordable luxury lighting brand offering high-quality and innovative lighting solutions for homes and businesses.",
   },
   {
-    Question: "Are the lights energy-efficient?",
+    Question: "How can I place an order?",
     Answer:
-      "Yes, most of our lights are designed to be energy-efficient. We primarily offer LED lights, which use significantly less power than traditional incandescent bulbs and have a longer lifespan.",
+      "You can place an order directly on our website. Simply select your preferred product, add it to your cart, and proceed to checkout.",
   },
   {
-    Question: "How do I install the lights?",
+    Question: "What are the delivery timelines?",
     Answer:
-      "Each light fixture comes with its own set of installation instructions. We provide detailed guides and videos for most of our products.",
+      "Our delivery timeline ranges from 7 to 15 days, depending on your location.",
   },
   {
-    Question: "How do I care for my lights to ensure they last?",
+    Question: "Do you offer express shipping?",
     Answer:
-      "Use a soft cloth to clean dust and dirt from your lights. Keep electrical parts dry and avoid direct water exposure unless the light is rated for outdoor use. Replace bulbs if they begin to flicker or burn out to prevent damage to the fixture.",
+      "Currently, we do not offer express shipping, but we are working on faster delivery options.",
   },
   {
-    Question: "Do you offer international shipping?",
+    Question: "How can I track my order?",
     Answer:
-      "Yes, we offer international shipping to many countries. Shipping fees and delivery times will vary depending on the destination. Please check the shipping details at checkout for more accurate information.",
+      "Once your order is shipped, we will provide you with a tracking link via email or SMS.",
   },
   {
-    Question: " What is your return/exchange policy for defective items?",
+    Question: "What is your return and exchange policy?",
     Answer:
-      "If you receive a defective or damaged item, we will offer a replacement of the piece at no additional cost. Please contact us within 24-48 days of receiving the item after which we will not be responsible.",
+      "For functional lighting – Returns and exchanges are accepted within 7 days of delivery if the product is unused and in its original packaging. For décor lights – No returns or exchanges are allowed.",
+  },
+  {
+    Question: "Do you offer refunds?",
+    Answer:
+      "We do not offer refunds on any products. However, eligible items can be exchanged or replaced as per our policy.",
+  },
+  {
+    Question: "What if my product arrives damaged?",
+    Answer:
+      "If your product arrives damaged, please notify us within 48 hours of delivery with pictures and videos of the damage. We will assess the claim and provide a replacement if applicable.",
+  },
+  {
+    Question: "Do Amprio products come with a warranty?",
+    Answer:
+      "Yes, our lighting products come with a standard manufacturer’s warranty. Warranty details may vary depending on the product category.",
+  },
+  {
+    Question: "How can I claim my product warranty?",
+    Answer:
+      "To claim your warranty, email us at [support email] with your order details, proof of purchase, and images/videos of the issue.",
+  },
+  {
+    Question: "Do you offer discounts?",
+    Answer:
+      "Yes, we offer special discounts during promotions. Stay updated by subscribing to our newsletter or following us on social media.",
+  },
+  {
+    Question: "Can I use multiple discount codes in one order?",
+    Answer: "No, only one discount code can be applied per order.",
+  },
+  {
+    Question: "Do you offer bulk order discounts?",
+    Answer:
+      "Yes, we provide special pricing for bulk orders. Please contact us at [email] for more details.",
+  },
+  {
+    Question: "What payment methods do you accept?",
+    Answer:
+      "We accept all major credit/debit cards, UPI, and net banking. All orders are prepaid. Cash on Delivery (COD) is NOT available.",
+  },
+  {
+    Question: "Do you offer installation services?",
+    Answer:
+      "Yes, we offer installation services in Delhi NCR. For other locations, you need to inform us in advance, and we can arrange for our technicians to assist you.",
+  },
+  {
+    Question: "Can I cancel my order after placing it?",
+    Answer:
+      "Order cancellations are only accepted if the product has not been dispatched. Once shipped, cancellations are not possible.",
   },
   {
     Question: "How can I contact customer support?",
     Answer:
-      "If you have any questions or need assistance, you can reach our customer support team via Phone or Whatsapp on +91 9311382997 (available from 9 AM to 6 PM, Monday to Friday)",
+      "You can reach us at 9350471371 or rudrakshi.vaishnoelectricals@gmail.com for any queries.",
   },
 ];
 
